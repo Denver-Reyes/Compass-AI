@@ -1,6 +1,6 @@
 ﻿namespace Compass_AI
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // Form1
+            // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(839, 479);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "frmMain";
+            Text = "COMPASS AI";
             ResumeLayout(false);
         }
 
