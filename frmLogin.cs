@@ -21,5 +21,10 @@ namespace Compass_AI
         {
 
         }
+
+        private void picbxCOMPASSAILogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
