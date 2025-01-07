@@ -36,6 +36,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             lblUsername = new Label();
             txtboxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             txtboxPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -151,6 +152,7 @@
             Controls.Add(lblPassword);
             Controls.Add(txtboxUsername);
             Controls.Add(lblUsername);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "COMPASS AI Login";
