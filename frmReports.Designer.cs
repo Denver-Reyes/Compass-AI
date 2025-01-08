@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReports));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lvlReports = new Label();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -57,7 +57,7 @@
             // 
             guna2DateTimePicker1.Checked = true;
             guna2DateTimePicker1.CustomFormat = "MMM dd, yyyy";
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges7;
+            guna2DateTimePicker1.CustomizableEdges = customizableEdges1;
             guna2DateTimePicker1.FillColor = Color.White;
             guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
@@ -65,7 +65,7 @@
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2DateTimePicker1.Size = new Size(122, 36);
             guna2DateTimePicker1.TabIndex = 1;
             guna2DateTimePicker1.Value = new DateTime(2025, 1, 7, 20, 50, 16, 341);
@@ -74,7 +74,7 @@
             // 
             guna2DateTimePicker2.Checked = true;
             guna2DateTimePicker2.CustomFormat = "MMM dd, yyyy";
-            guna2DateTimePicker2.CustomizableEdges = customizableEdges9;
+            guna2DateTimePicker2.CustomizableEdges = customizableEdges3;
             guna2DateTimePicker2.FillColor = Color.White;
             guna2DateTimePicker2.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -82,7 +82,7 @@
             guna2DateTimePicker2.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker2.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2DateTimePicker2.Size = new Size(122, 36);
             guna2DateTimePicker2.TabIndex = 2;
             guna2DateTimePicker2.Value = new DateTime(2025, 1, 7, 20, 50, 20, 273);
@@ -99,10 +99,10 @@
             // 
             // btnReturnRandA
             // 
-            btnReturnRandA.BackColor = Color.DimGray;
+            btnReturnRandA.BackColor = Color.CadetBlue;
             btnReturnRandA.BorderRadius = 1;
             btnReturnRandA.BorderThickness = 2;
-            btnReturnRandA.CustomizableEdges = customizableEdges11;
+            btnReturnRandA.CustomizableEdges = customizableEdges5;
             btnReturnRandA.DisabledState.BorderColor = Color.DarkGray;
             btnReturnRandA.DisabledState.CustomBorderColor = Color.DarkGray;
             btnReturnRandA.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -114,7 +114,7 @@
             btnReturnRandA.ImageSize = new Size(27, 27);
             btnReturnRandA.Location = new Point(1084, 12);
             btnReturnRandA.Name = "btnReturnRandA";
-            btnReturnRandA.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnReturnRandA.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnReturnRandA.Size = new Size(45, 45);
             btnReturnRandA.TabIndex = 4;
             // 
@@ -128,9 +128,11 @@
             Controls.Add(guna2DateTimePicker2);
             Controls.Add(guna2DateTimePicker1);
             Controls.Add(lvlReports);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimizeBox = false;
             Name = "frmReports";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Reports and Analytics";
             ResumeLayout(false);
             PerformLayout();

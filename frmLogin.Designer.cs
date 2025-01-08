@@ -116,7 +116,7 @@
             btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogin.FillColor = Color.FromArgb(40, 90, 114);
+            btnLogin.FillColor = Color.CadetBlue;
             btnLogin.Font = new Font("Segoe UI", 9F);
             btnLogin.ForeColor = Color.Black;
             btnLogin.Location = new Point(171, 279);
@@ -142,6 +142,7 @@
             // 
             // frmLogin
             // 
+            AcceptButton = btnLogin;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
@@ -152,6 +153,7 @@
             Controls.Add(lblPassword);
             Controls.Add(txtboxUsername);
             Controls.Add(lblUsername);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmLogin";

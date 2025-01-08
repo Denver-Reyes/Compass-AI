@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvaluationSup));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnReturnEvalSup = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // btnReturnEvalSup
             // 
-            btnReturnEvalSup.BackColor = Color.DimGray;
+            btnReturnEvalSup.BackColor = Color.CadetBlue;
             btnReturnEvalSup.BorderRadius = 1;
             btnReturnEvalSup.BorderThickness = 2;
-            btnReturnEvalSup.CustomizableEdges = customizableEdges3;
+            btnReturnEvalSup.CustomizableEdges = customizableEdges1;
             btnReturnEvalSup.DisabledState.BorderColor = Color.DarkGray;
             btnReturnEvalSup.DisabledState.CustomBorderColor = Color.DarkGray;
             btnReturnEvalSup.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -51,7 +51,7 @@
             btnReturnEvalSup.ImageSize = new Size(27, 27);
             btnReturnEvalSup.Location = new Point(1084, 12);
             btnReturnEvalSup.Name = "btnReturnEvalSup";
-            btnReturnEvalSup.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnReturnEvalSup.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnReturnEvalSup.Size = new Size(45, 45);
             btnReturnEvalSup.TabIndex = 4;
             // 
@@ -61,6 +61,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1160, 723);
             Controls.Add(btnReturnEvalSup);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEvaluationSup";
             Text = "Evaluation";
