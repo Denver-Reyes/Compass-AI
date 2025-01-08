@@ -73,9 +73,59 @@ namespace Compass_AI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap COMPASS_AI_WHITE_LOGO_NO_BG {
+            get {
+                object obj = ResourceManager.GetObject("COMPASS AI WHITE LOGO NO BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap COMPASS_AI_whitebg_logo {
             get {
                 object obj = ResourceManager.GetObject("COMPASS AI whitebg logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap COMPASS_AI_WORD_LOGO {
+            get {
+                object obj = ResourceManager.GetObject("COMPASS AI WORD LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_design__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Untitled design (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_design__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Untitled design (6)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

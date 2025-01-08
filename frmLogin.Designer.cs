@@ -153,6 +153,7 @@
             Controls.Add(txtboxUsername);
             Controls.Add(lblUsername);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "COMPASS AI Login";
