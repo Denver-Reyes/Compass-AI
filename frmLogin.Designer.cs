@@ -38,8 +38,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             lblUsername = new Label();
-            txtboxUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            txtboxPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             lblPassword = new Label();
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
             picbxCOMPASSAILogo = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -56,50 +56,50 @@
             lblUsername.TabIndex = 0;
             lblUsername.Text = "Username:";
             // 
-            // txtboxUsername
+            // txtUsername
             // 
-            txtboxUsername.CustomizableEdges = customizableEdges1;
-            txtboxUsername.DefaultText = "";
-            txtboxUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtboxUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtboxUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtboxUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtboxUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtboxUsername.Font = new Font("Segoe UI", 9F);
-            txtboxUsername.ForeColor = Color.Black;
-            txtboxUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtboxUsername.Location = new Point(93, 161);
-            txtboxUsername.Name = "txtboxUsername";
-            txtboxUsername.PasswordChar = '\0';
-            txtboxUsername.PlaceholderForeColor = Color.Black;
-            txtboxUsername.PlaceholderText = "";
-            txtboxUsername.SelectedText = "";
-            txtboxUsername.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtboxUsername.Size = new Size(200, 36);
-            txtboxUsername.TabIndex = 1;
-            txtboxUsername.TextChanged += guna2TextBox1_TextChanged;
+            txtUsername.CustomizableEdges = customizableEdges1;
+            txtUsername.DefaultText = "";
+            txtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUsername.Font = new Font("Segoe UI", 9F);
+            txtUsername.ForeColor = Color.Black;
+            txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUsername.Location = new Point(93, 161);
+            txtUsername.Name = "txtUsername";
+            txtUsername.PasswordChar = '\0';
+            txtUsername.PlaceholderForeColor = Color.Black;
+            txtUsername.PlaceholderText = "";
+            txtUsername.SelectedText = "";
+            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtUsername.Size = new Size(200, 36);
+            txtUsername.TabIndex = 1;
+            txtUsername.TextChanged += guna2TextBox1_TextChanged;
             // 
-            // txtboxPassword
+            // txtPassword
             // 
-            txtboxPassword.CustomizableEdges = customizableEdges3;
-            txtboxPassword.DefaultText = "";
-            txtboxPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtboxPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtboxPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtboxPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtboxPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtboxPassword.Font = new Font("Segoe UI", 9F);
-            txtboxPassword.ForeColor = Color.Black;
-            txtboxPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtboxPassword.Location = new Point(93, 224);
-            txtboxPassword.Name = "txtboxPassword";
-            txtboxPassword.PasswordChar = '*';
-            txtboxPassword.PlaceholderForeColor = Color.Black;
-            txtboxPassword.PlaceholderText = "";
-            txtboxPassword.SelectedText = "";
-            txtboxPassword.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtboxPassword.Size = new Size(200, 36);
-            txtboxPassword.TabIndex = 3;
+            txtPassword.CustomizableEdges = customizableEdges3;
+            txtPassword.DefaultText = "";
+            txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPassword.Font = new Font("Segoe UI", 9F);
+            txtPassword.ForeColor = Color.Black;
+            txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPassword.Location = new Point(93, 224);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.PlaceholderForeColor = Color.Black;
+            txtPassword.PlaceholderText = "";
+            txtPassword.SelectedText = "";
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtPassword.Size = new Size(200, 36);
+            txtPassword.TabIndex = 3;
             // 
             // lblPassword
             // 
@@ -126,6 +126,7 @@
             btnLogin.Size = new Size(122, 32);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
+            btnLogin.Click += btnLogin_Click;
             // 
             // picbxCOMPASSAILogo
             // 
@@ -162,9 +163,9 @@
             Controls.Add(lblIncorrectlogin);
             Controls.Add(picbxCOMPASSAILogo);
             Controls.Add(btnLogin);
-            Controls.Add(txtboxPassword);
+            Controls.Add(txtPassword);
             Controls.Add(lblPassword);
-            Controls.Add(txtboxUsername);
+            Controls.Add(txtUsername);
             Controls.Add(lblUsername);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -180,8 +181,8 @@
         #endregion
 
         private Label lblUsername;
-        private Guna.UI2.WinForms.Guna2TextBox txtboxUsername;
-        private Guna.UI2.WinForms.Guna2TextBox txtboxPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Label lblPassword;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2PictureBox picbxCOMPASSAILogo;
