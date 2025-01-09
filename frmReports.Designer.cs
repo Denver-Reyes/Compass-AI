@@ -122,13 +122,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1144, 684);
+            ClientSize = new Size(1176, 762);
             Controls.Add(btnReturnRandA);
             Controls.Add(lblDash);
             Controls.Add(guna2DateTimePicker2);
             Controls.Add(guna2DateTimePicker1);
             Controls.Add(lvlReports);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimizeBox = false;
             Name = "frmReports";

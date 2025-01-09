@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -49,7 +47,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -60,26 +58,17 @@
             btnEvaluation = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
-            guna2CustomGradientPanel1.SuspendLayout();
             guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // guna2CustomGradientPanel1
+            // gunaAreaDataset1
             // 
-            guna2CustomGradientPanel1.Controls.Add(guna2GradientPanel1);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges19;
-            guna2CustomGradientPanel1.Dock = DockStyle.Top;
-            guna2CustomGradientPanel1.Font = new Font("Segoe UI", 15F);
-            guna2CustomGradientPanel1.Location = new Point(0, 0);
-            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2CustomGradientPanel1.Size = new Size(1160, 723);
-            guna2CustomGradientPanel1.TabIndex = 0;
-            guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
+            gunaAreaDataset1.BorderColor = Color.Empty;
+            gunaAreaDataset1.FillColor = Color.Empty;
+            gunaAreaDataset1.Label = "Area1";
             // 
             // guna2GradientPanel1
             // 
@@ -159,6 +148,7 @@
             btnReports.Size = new Size(180, 45);
             btnReports.TabIndex = 2;
             btnReports.Text = "Reports and Analytics";
+            btnReports.Click += btnReports_Click;
             // 
             // btnCreateEval
             // 
@@ -178,6 +168,7 @@
             btnCreateEval.Size = new Size(180, 45);
             btnCreateEval.TabIndex = 4;
             btnCreateEval.Text = "Create Evaluation";
+            btnCreateEval.Click += btnCreateEval_Click;
             // 
             // btnWIP
             // 
@@ -216,6 +207,7 @@
             btnLeaderboard.Size = new Size(180, 45);
             btnLeaderboard.TabIndex = 2;
             btnLeaderboard.Text = "Leaderboard";
+            btnLeaderboard.Click += btnLeaderboard_Click;
             // 
             // btnEvaluation
             // 
@@ -236,6 +228,7 @@
             btnEvaluation.Size = new Size(180, 45);
             btnEvaluation.TabIndex = 1;
             btnEvaluation.Text = "Evaluation";
+            btnEvaluation.Click += btnEvaluation_Click;
             // 
             // pictureBox1
             // 
@@ -263,25 +256,20 @@
             guna2PictureBox1.TabIndex = 1;
             guna2PictureBox1.TabStop = false;
             // 
-            // gunaAreaDataset1
-            // 
-            gunaAreaDataset1.BorderColor = Color.Empty;
-            gunaAreaDataset1.FillColor = Color.Empty;
-            gunaAreaDataset1.Label = "Area1";
-            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1160, 723);
-            Controls.Add(guna2CustomGradientPanel1);
+            ClientSize = new Size(1160, 861);
+            Controls.Add(guna2GradientPanel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
             MaximizeBox = false;
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "COMPASS AI";
-            guna2CustomGradientPanel1.ResumeLayout(false);
+            Load += frmMain_Load;
             guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -290,18 +278,16 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button btnReports;
         private Guna.UI2.WinForms.Guna2Button btnCreateEval;
         private Guna.UI2.WinForms.Guna2Button btnWIP;
         private Guna.UI2.WinForms.Guna2Button btnLeaderboard;
         private Guna.UI2.WinForms.Guna2Button btnEvaluation;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset1;
+        private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

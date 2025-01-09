@@ -183,7 +183,7 @@
             Controls.Add(pnlQuestionnaire);
             Controls.Add(lvlEvaluation);
             Controls.Add(btnReturnEvalEmp);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEvaluationEmp";
             Text = "Evaluation";

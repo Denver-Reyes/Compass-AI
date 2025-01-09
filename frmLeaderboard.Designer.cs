@@ -128,7 +128,7 @@
             Controls.Add(btnReturnLB);
             Controls.Add(guna2Panel1);
             Controls.Add(lvlReports);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmLeaderboard";
