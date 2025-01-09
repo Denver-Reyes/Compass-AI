@@ -16,5 +16,34 @@ namespace Compass_AI
         {
             InitializeComponent();
         }
+
+        private void frmEvaluationEmp_Load(object sender, EventArgs e)
+        {
+            ResetButtonColors();
+        }
+        private void ResetButtonColors()
+        {
+            // Reset all buttons to default color
+            btnYesEval.FillColor = Color.CadetBlue;
+            btnNoEval.FillColor = Color.CadetBlue;
+            btnNAEval.FillColor = Color.CadetBlue;
+        }
+        private void btnYesEval_Click(object sender, EventArgs e)
+        {
+            ResetButtonColors();
+            btnYesEval.FillColor = Color.Red;
+        }
+
+        private void btnNoEval_Click(object sender, EventArgs e)
+        {
+            ResetButtonColors();
+            btnNoEval.FillColor = Color.Red;
+        }
+
+        private void btnNAEval_Click(object sender, EventArgs e)
+        {
+            ResetButtonColors();
+            btnNAEval.FillColor = Color.Red;
+        }
     }
 }

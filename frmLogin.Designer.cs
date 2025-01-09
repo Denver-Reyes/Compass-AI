@@ -43,6 +43,7 @@
             lblPassword = new Label();
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
             picbxCOMPASSAILogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            lblIncorrectlogin = new Label();
             ((System.ComponentModel.ISupportInitialize)picbxCOMPASSAILogo).BeginInit();
             SuspendLayout();
             // 
@@ -119,7 +120,7 @@
             btnLogin.FillColor = Color.CadetBlue;
             btnLogin.Font = new Font("Segoe UI", 9F);
             btnLogin.ForeColor = Color.Black;
-            btnLogin.Location = new Point(171, 279);
+            btnLogin.Location = new Point(171, 294);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnLogin.Size = new Size(122, 32);
@@ -140,6 +141,17 @@
             picbxCOMPASSAILogo.TabStop = false;
             picbxCOMPASSAILogo.Click += picbxCOMPASSAILogo_Click;
             // 
+            // lblIncorrectlogin
+            // 
+            lblIncorrectlogin.AutoSize = true;
+            lblIncorrectlogin.ForeColor = Color.IndianRed;
+            lblIncorrectlogin.Location = new Point(93, 267);
+            lblIncorrectlogin.Name = "lblIncorrectlogin";
+            lblIncorrectlogin.Size = new Size(177, 15);
+            lblIncorrectlogin.TabIndex = 6;
+            lblIncorrectlogin.Text = "Incorrect Username or Password";
+            lblIncorrectlogin.Visible = false;
+            // 
             // frmLogin
             // 
             AcceptButton = btnLogin;
@@ -147,6 +159,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblIncorrectlogin);
             Controls.Add(picbxCOMPASSAILogo);
             Controls.Add(btnLogin);
             Controls.Add(txtboxPassword);
@@ -172,5 +185,6 @@
         private Label lblPassword;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2PictureBox picbxCOMPASSAILogo;
+        private Label lblIncorrectlogin;
     }
 }

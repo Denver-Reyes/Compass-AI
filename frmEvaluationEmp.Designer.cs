@@ -41,13 +41,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnReturnEvalEmp = new Guna.UI2.WinForms.Guna2Button();
             lvlEvaluation = new Label();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            pnlQuestionnaire = new Guna.UI2.WinForms.Guna2Panel();
             lvlQueNo = new Label();
             btnNoEval = new Guna.UI2.WinForms.Guna2Button();
             btnNAEval = new Guna.UI2.WinForms.Guna2Button();
             btnYesEval = new Guna.UI2.WinForms.Guna2Button();
             lblQuestionnaire = new Label();
-            guna2Panel1.SuspendLayout();
+            pnlQuestionnaire.SuspendLayout();
             SuspendLayout();
             // 
             // btnReturnEvalEmp
@@ -82,19 +82,19 @@
             lvlEvaluation.TabIndex = 5;
             lvlEvaluation.Text = "Evaluation";
             // 
-            // guna2Panel1
+            // pnlQuestionnaire
             // 
-            guna2Panel1.Controls.Add(lvlQueNo);
-            guna2Panel1.Controls.Add(btnNoEval);
-            guna2Panel1.Controls.Add(btnNAEval);
-            guna2Panel1.Controls.Add(btnYesEval);
-            guna2Panel1.Controls.Add(lblQuestionnaire);
-            guna2Panel1.CustomizableEdges = customizableEdges9;
-            guna2Panel1.Location = new Point(74, 93);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel1.Size = new Size(979, 66);
-            guna2Panel1.TabIndex = 6;
+            pnlQuestionnaire.Controls.Add(lvlQueNo);
+            pnlQuestionnaire.Controls.Add(btnNoEval);
+            pnlQuestionnaire.Controls.Add(btnNAEval);
+            pnlQuestionnaire.Controls.Add(btnYesEval);
+            pnlQuestionnaire.Controls.Add(lblQuestionnaire);
+            pnlQuestionnaire.CustomizableEdges = customizableEdges9;
+            pnlQuestionnaire.Location = new Point(74, 93);
+            pnlQuestionnaire.Name = "pnlQuestionnaire";
+            pnlQuestionnaire.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            pnlQuestionnaire.Size = new Size(979, 66);
+            pnlQuestionnaire.TabIndex = 6;
             // 
             // lvlQueNo
             // 
@@ -114,14 +114,17 @@
             btnNoEval.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNoEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnNoEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNoEval.FillColor = Color.CadetBlue;
             btnNoEval.Font = new Font("Segoe UI", 9F);
             btnNoEval.ForeColor = Color.White;
+            btnNoEval.HoverState.FillColor = Color.PowderBlue;
             btnNoEval.Location = new Point(757, 14);
             btnNoEval.Name = "btnNoEval";
             btnNoEval.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnNoEval.Size = new Size(81, 33);
             btnNoEval.TabIndex = 9;
             btnNoEval.Text = "No";
+            btnNoEval.Click += btnNoEval_Click;
             // 
             // btnNAEval
             // 
@@ -130,14 +133,17 @@
             btnNAEval.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNAEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnNAEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNAEval.FillColor = Color.CadetBlue;
             btnNAEval.Font = new Font("Segoe UI", 9F);
             btnNAEval.ForeColor = Color.White;
+            btnNAEval.HoverState.FillColor = Color.PowderBlue;
             btnNAEval.Location = new Point(876, 14);
             btnNAEval.Name = "btnNAEval";
             btnNAEval.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnNAEval.Size = new Size(81, 33);
             btnNAEval.TabIndex = 8;
             btnNAEval.Text = "N/A";
+            btnNAEval.Click += btnNAEval_Click;
             // 
             // btnYesEval
             // 
@@ -146,14 +152,17 @@
             btnYesEval.DisabledState.CustomBorderColor = Color.DarkGray;
             btnYesEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnYesEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnYesEval.FillColor = Color.CadetBlue;
             btnYesEval.Font = new Font("Segoe UI", 9F);
             btnYesEval.ForeColor = Color.White;
+            btnYesEval.HoverState.FillColor = Color.PowderBlue;
             btnYesEval.Location = new Point(632, 14);
             btnYesEval.Name = "btnYesEval";
             btnYesEval.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnYesEval.Size = new Size(81, 33);
             btnYesEval.TabIndex = 7;
             btnYesEval.Text = "Yes";
+            btnYesEval.Click += btnYesEval_Click;
             // 
             // lblQuestionnaire
             // 
@@ -171,15 +180,16 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1160, 723);
-            Controls.Add(guna2Panel1);
+            Controls.Add(pnlQuestionnaire);
             Controls.Add(lvlEvaluation);
             Controls.Add(btnReturnEvalEmp);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEvaluationEmp";
             Text = "Evaluation";
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
+            Load += frmEvaluationEmp_Load;
+            pnlQuestionnaire.ResumeLayout(false);
+            pnlQuestionnaire.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,7 +198,7 @@
 
         private Guna.UI2.WinForms.Guna2Button btnReturnEvalEmp;
         private Label lvlEvaluation;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel pnlQuestionnaire;
         private Label lblQuestionnaire;
         private Guna.UI2.WinForms.Guna2Button btnNoEval;
         private Guna.UI2.WinForms.Guna2Button btnNAEval;
