@@ -122,6 +122,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1176, 762);
             Controls.Add(btnReturnRandA);
             Controls.Add(lblDash);

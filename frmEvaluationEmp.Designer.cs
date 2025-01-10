@@ -31,22 +31,27 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvaluationEmp));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnReturnEvalEmp = new Guna.UI2.WinForms.Guna2Button();
-            lvlEvaluation = new Label();
             pnlQuestionnaire = new Guna.UI2.WinForms.Guna2Panel();
+            rbtnYes = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             lvlQueNo = new Label();
+            lblQuestionnaire = new Label();
             btnNoEval = new Guna.UI2.WinForms.Guna2Button();
             btnNAEval = new Guna.UI2.WinForms.Guna2Button();
             btnYesEval = new Guna.UI2.WinForms.Guna2Button();
-            lblQuestionnaire = new Label();
+            rbtnNo = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            rbtnNA = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             pnlQuestionnaire.SuspendLayout();
             SuspendLayout();
             // 
@@ -71,30 +76,37 @@
             btnReturnEvalEmp.Size = new Size(45, 45);
             btnReturnEvalEmp.TabIndex = 4;
             // 
-            // lvlEvaluation
-            // 
-            lvlEvaluation.AutoSize = true;
-            lvlEvaluation.Font = new Font("Segoe UI", 20F);
-            lvlEvaluation.ForeColor = Color.FromArgb(40, 90, 114);
-            lvlEvaluation.Location = new Point(23, 27);
-            lvlEvaluation.Name = "lvlEvaluation";
-            lvlEvaluation.Size = new Size(141, 37);
-            lvlEvaluation.TabIndex = 5;
-            lvlEvaluation.Text = "Evaluation";
-            // 
             // pnlQuestionnaire
             // 
+            pnlQuestionnaire.BackColor = Color.White;
+            pnlQuestionnaire.Controls.Add(rbtnNA);
+            pnlQuestionnaire.Controls.Add(rbtnNo);
+            pnlQuestionnaire.Controls.Add(rbtnYes);
             pnlQuestionnaire.Controls.Add(lvlQueNo);
-            pnlQuestionnaire.Controls.Add(btnNoEval);
-            pnlQuestionnaire.Controls.Add(btnNAEval);
-            pnlQuestionnaire.Controls.Add(btnYesEval);
             pnlQuestionnaire.Controls.Add(lblQuestionnaire);
-            pnlQuestionnaire.CustomizableEdges = customizableEdges9;
+            pnlQuestionnaire.CustomizableEdges = customizableEdges6;
             pnlQuestionnaire.Location = new Point(74, 93);
             pnlQuestionnaire.Name = "pnlQuestionnaire";
-            pnlQuestionnaire.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            pnlQuestionnaire.Size = new Size(979, 66);
+            pnlQuestionnaire.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            pnlQuestionnaire.Size = new Size(940, 66);
             pnlQuestionnaire.TabIndex = 6;
+            // 
+            // rbtnYes
+            // 
+            rbtnYes.CheckedState.BorderColor = Color.FromArgb(143, 206, 218);
+            rbtnYes.CheckedState.BorderThickness = 3;
+            rbtnYes.CheckedState.FillColor = Color.White;
+            rbtnYes.CheckedState.InnerColor = Color.FromArgb(143, 206, 218);
+            rbtnYes.Location = new Point(674, 24);
+            rbtnYes.Name = "rbtnYes";
+            rbtnYes.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            rbtnYes.Size = new Size(20, 20);
+            rbtnYes.TabIndex = 7;
+            rbtnYes.Text = "guna2CustomRadioButton1";
+            rbtnYes.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rbtnYes.UncheckedState.BorderThickness = 2;
+            rbtnYes.UncheckedState.FillColor = Color.Transparent;
+            rbtnYes.UncheckedState.InnerColor = Color.Transparent;
             // 
             // lvlQueNo
             // 
@@ -107,63 +119,6 @@
             lvlQueNo.TabIndex = 10;
             lvlQueNo.Text = "Q#";
             // 
-            // btnNoEval
-            // 
-            btnNoEval.CustomizableEdges = customizableEdges3;
-            btnNoEval.DisabledState.BorderColor = Color.DarkGray;
-            btnNoEval.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnNoEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnNoEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnNoEval.FillColor = Color.CadetBlue;
-            btnNoEval.Font = new Font("Segoe UI", 9F);
-            btnNoEval.ForeColor = Color.White;
-            btnNoEval.HoverState.FillColor = Color.PowderBlue;
-            btnNoEval.Location = new Point(757, 14);
-            btnNoEval.Name = "btnNoEval";
-            btnNoEval.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnNoEval.Size = new Size(81, 33);
-            btnNoEval.TabIndex = 9;
-            btnNoEval.Text = "No";
-            btnNoEval.Click += btnNoEval_Click;
-            // 
-            // btnNAEval
-            // 
-            btnNAEval.CustomizableEdges = customizableEdges5;
-            btnNAEval.DisabledState.BorderColor = Color.DarkGray;
-            btnNAEval.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnNAEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnNAEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnNAEval.FillColor = Color.CadetBlue;
-            btnNAEval.Font = new Font("Segoe UI", 9F);
-            btnNAEval.ForeColor = Color.White;
-            btnNAEval.HoverState.FillColor = Color.PowderBlue;
-            btnNAEval.Location = new Point(876, 14);
-            btnNAEval.Name = "btnNAEval";
-            btnNAEval.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnNAEval.Size = new Size(81, 33);
-            btnNAEval.TabIndex = 8;
-            btnNAEval.Text = "N/A";
-            btnNAEval.Click += btnNAEval_Click;
-            // 
-            // btnYesEval
-            // 
-            btnYesEval.CustomizableEdges = customizableEdges7;
-            btnYesEval.DisabledState.BorderColor = Color.DarkGray;
-            btnYesEval.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnYesEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnYesEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnYesEval.FillColor = Color.CadetBlue;
-            btnYesEval.Font = new Font("Segoe UI", 9F);
-            btnYesEval.ForeColor = Color.White;
-            btnYesEval.HoverState.FillColor = Color.PowderBlue;
-            btnYesEval.Location = new Point(632, 14);
-            btnYesEval.Name = "btnYesEval";
-            btnYesEval.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnYesEval.Size = new Size(81, 33);
-            btnYesEval.TabIndex = 7;
-            btnYesEval.Text = "Yes";
-            btnYesEval.Click += btnYesEval_Click;
-            // 
             // lblQuestionnaire
             // 
             lblQuestionnaire.AutoSize = true;
@@ -175,14 +130,108 @@
             lblQuestionnaire.TabIndex = 5;
             lblQuestionnaire.Text = "Questionnaire";
             // 
+            // btnNoEval
+            // 
+            btnNoEval.CustomizableEdges = customizableEdges8;
+            btnNoEval.DisabledState.BorderColor = Color.DarkGray;
+            btnNoEval.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnNoEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnNoEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNoEval.FillColor = Color.CadetBlue;
+            btnNoEval.Font = new Font("Segoe UI", 9F);
+            btnNoEval.ForeColor = Color.White;
+            btnNoEval.HoverState.FillColor = Color.PowderBlue;
+            btnNoEval.Location = new Point(826, 41);
+            btnNoEval.Name = "btnNoEval";
+            btnNoEval.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            btnNoEval.Size = new Size(81, 33);
+            btnNoEval.TabIndex = 9;
+            btnNoEval.Text = "No";
+            btnNoEval.Click += btnNoEval_Click;
+            // 
+            // btnNAEval
+            // 
+            btnNAEval.CustomizableEdges = customizableEdges10;
+            btnNAEval.DisabledState.BorderColor = Color.DarkGray;
+            btnNAEval.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnNAEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnNAEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNAEval.FillColor = Color.CadetBlue;
+            btnNAEval.Font = new Font("Segoe UI", 9F);
+            btnNAEval.ForeColor = Color.White;
+            btnNAEval.HoverState.FillColor = Color.PowderBlue;
+            btnNAEval.Location = new Point(933, 41);
+            btnNAEval.Name = "btnNAEval";
+            btnNAEval.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            btnNAEval.Size = new Size(81, 33);
+            btnNAEval.TabIndex = 8;
+            btnNAEval.Text = "N/A";
+            btnNAEval.Click += btnNAEval_Click;
+            // 
+            // btnYesEval
+            // 
+            btnYesEval.CustomizableEdges = customizableEdges12;
+            btnYesEval.DisabledState.BorderColor = Color.DarkGray;
+            btnYesEval.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnYesEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnYesEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnYesEval.FillColor = Color.CadetBlue;
+            btnYesEval.Font = new Font("Segoe UI", 9F);
+            btnYesEval.ForeColor = Color.White;
+            btnYesEval.HoverState.FillColor = Color.PowderBlue;
+            btnYesEval.Location = new Point(717, 41);
+            btnYesEval.Name = "btnYesEval";
+            btnYesEval.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            btnYesEval.Size = new Size(81, 33);
+            btnYesEval.TabIndex = 7;
+            btnYesEval.Text = "Yes";
+            btnYesEval.Click += btnYesEval_Click;
+            // 
+            // rbtnNo
+            // 
+            rbtnNo.CheckedState.BorderColor = Color.FromArgb(143, 206, 218);
+            rbtnNo.CheckedState.BorderThickness = 3;
+            rbtnNo.CheckedState.FillColor = Color.White;
+            rbtnNo.CheckedState.InnerColor = Color.FromArgb(143, 206, 218);
+            rbtnNo.Location = new Point(780, 24);
+            rbtnNo.Name = "rbtnNo";
+            rbtnNo.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            rbtnNo.Size = new Size(20, 20);
+            rbtnNo.TabIndex = 11;
+            rbtnNo.Text = "guna2CustomRadioButton2";
+            rbtnNo.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rbtnNo.UncheckedState.BorderThickness = 2;
+            rbtnNo.UncheckedState.FillColor = Color.Transparent;
+            rbtnNo.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // rbtnNA
+            // 
+            rbtnNA.CheckedState.BorderColor = Color.FromArgb(143, 206, 218);
+            rbtnNA.CheckedState.BorderThickness = 3;
+            rbtnNA.CheckedState.FillColor = Color.White;
+            rbtnNA.CheckedState.InnerColor = Color.FromArgb(143, 206, 218);
+            rbtnNA.Location = new Point(887, 24);
+            rbtnNA.Name = "rbtnNA";
+            rbtnNA.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            rbtnNA.Size = new Size(20, 20);
+            rbtnNA.TabIndex = 12;
+            rbtnNA.Text = "guna2CustomRadioButton3";
+            rbtnNA.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rbtnNA.UncheckedState.BorderThickness = 2;
+            rbtnNA.UncheckedState.FillColor = Color.Transparent;
+            rbtnNA.UncheckedState.InnerColor = Color.Transparent;
+            // 
             // frmEvaluationEmp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1160, 723);
             Controls.Add(pnlQuestionnaire);
-            Controls.Add(lvlEvaluation);
+            Controls.Add(btnNAEval);
+            Controls.Add(btnNoEval);
             Controls.Add(btnReturnEvalEmp);
+            Controls.Add(btnYesEval);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEvaluationEmp";
@@ -191,18 +240,19 @@
             pnlQuestionnaire.ResumeLayout(false);
             pnlQuestionnaire.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button btnReturnEvalEmp;
-        private Label lvlEvaluation;
         private Guna.UI2.WinForms.Guna2Panel pnlQuestionnaire;
         private Label lblQuestionnaire;
         private Guna.UI2.WinForms.Guna2Button btnNoEval;
         private Guna.UI2.WinForms.Guna2Button btnNAEval;
         private Guna.UI2.WinForms.Guna2Button btnYesEval;
         private Label lvlQueNo;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rbtnYes;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rbtnNA;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rbtnNo;
     }
 }
