@@ -28,23 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvaluationEmp));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            btnReturnEvalEmp = new Guna.UI2.WinForms.Guna2Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvaluationEmp));
             pnlQuestionnaire = new Guna.UI2.WinForms.Guna2Panel();
             rbtnYes = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             lvlQueNo = new Label();
@@ -58,27 +55,6 @@
             pnlQuestionnaire.SuspendLayout();
             SuspendLayout();
             // 
-            // btnReturnEvalEmp
-            // 
-            btnReturnEvalEmp.BackColor = Color.CadetBlue;
-            btnReturnEvalEmp.BorderRadius = 1;
-            btnReturnEvalEmp.BorderThickness = 2;
-            btnReturnEvalEmp.CustomizableEdges = customizableEdges1;
-            btnReturnEvalEmp.DisabledState.BorderColor = Color.DarkGray;
-            btnReturnEvalEmp.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnReturnEvalEmp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnReturnEvalEmp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnReturnEvalEmp.FillColor = Color.Transparent;
-            btnReturnEvalEmp.Font = new Font("Segoe UI", 9F);
-            btnReturnEvalEmp.ForeColor = Color.White;
-            btnReturnEvalEmp.Image = (Image)resources.GetObject("btnReturnEvalEmp.Image");
-            btnReturnEvalEmp.ImageSize = new Size(27, 27);
-            btnReturnEvalEmp.Location = new Point(1084, 12);
-            btnReturnEvalEmp.Name = "btnReturnEvalEmp";
-            btnReturnEvalEmp.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnReturnEvalEmp.Size = new Size(45, 45);
-            btnReturnEvalEmp.TabIndex = 4;
-            // 
             // pnlQuestionnaire
             // 
             pnlQuestionnaire.BackColor = Color.White;
@@ -87,10 +63,10 @@
             pnlQuestionnaire.Controls.Add(rbtnYes);
             pnlQuestionnaire.Controls.Add(lvlQueNo);
             pnlQuestionnaire.Controls.Add(lblQuestionnaire);
-            pnlQuestionnaire.CustomizableEdges = customizableEdges6;
+            pnlQuestionnaire.CustomizableEdges = customizableEdges4;
             pnlQuestionnaire.Location = new Point(71, 72);
             pnlQuestionnaire.Name = "pnlQuestionnaire";
-            pnlQuestionnaire.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            pnlQuestionnaire.ShadowDecoration.CustomizableEdges = customizableEdges5;
             pnlQuestionnaire.Size = new Size(991, 66);
             pnlQuestionnaire.TabIndex = 6;
             // 
@@ -102,7 +78,7 @@
             rbtnYes.CheckedState.InnerColor = Color.FromArgb(143, 206, 218);
             rbtnYes.Location = new Point(722, 24);
             rbtnYes.Name = "rbtnYes";
-            rbtnYes.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            rbtnYes.ShadowDecoration.CustomizableEdges = customizableEdges3;
             rbtnYes.Size = new Size(20, 20);
             rbtnYes.TabIndex = 7;
             rbtnYes.Text = "guna2CustomRadioButton1";
@@ -135,7 +111,7 @@
             // 
             // btnNoEval
             // 
-            btnNoEval.CustomizableEdges = customizableEdges8;
+            btnNoEval.CustomizableEdges = customizableEdges6;
             btnNoEval.DisabledState.BorderColor = Color.DarkGray;
             btnNoEval.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNoEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -146,7 +122,7 @@
             btnNoEval.HoverState.FillColor = Color.PowderBlue;
             btnNoEval.Location = new Point(874, 20);
             btnNoEval.Name = "btnNoEval";
-            btnNoEval.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            btnNoEval.ShadowDecoration.CustomizableEdges = customizableEdges7;
             btnNoEval.Size = new Size(81, 33);
             btnNoEval.TabIndex = 9;
             btnNoEval.Text = "No";
@@ -154,7 +130,7 @@
             // 
             // btnNAEval
             // 
-            btnNAEval.CustomizableEdges = customizableEdges10;
+            btnNAEval.CustomizableEdges = customizableEdges8;
             btnNAEval.DisabledState.BorderColor = Color.DarkGray;
             btnNAEval.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNAEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -165,7 +141,7 @@
             btnNAEval.HoverState.FillColor = Color.PowderBlue;
             btnNAEval.Location = new Point(981, 20);
             btnNAEval.Name = "btnNAEval";
-            btnNAEval.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            btnNAEval.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btnNAEval.Size = new Size(81, 33);
             btnNAEval.TabIndex = 8;
             btnNAEval.Text = "N/A";
@@ -173,7 +149,7 @@
             // 
             // btnYesEval
             // 
-            btnYesEval.CustomizableEdges = customizableEdges12;
+            btnYesEval.CustomizableEdges = customizableEdges10;
             btnYesEval.DisabledState.BorderColor = Color.DarkGray;
             btnYesEval.DisabledState.CustomBorderColor = Color.DarkGray;
             btnYesEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -184,7 +160,7 @@
             btnYesEval.HoverState.FillColor = Color.PowderBlue;
             btnYesEval.Location = new Point(765, 20);
             btnYesEval.Name = "btnYesEval";
-            btnYesEval.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            btnYesEval.ShadowDecoration.CustomizableEdges = customizableEdges11;
             btnYesEval.Size = new Size(81, 33);
             btnYesEval.TabIndex = 7;
             btnYesEval.Text = "Yes";
@@ -198,7 +174,7 @@
             rbtnNo.CheckedState.InnerColor = Color.FromArgb(143, 206, 218);
             rbtnNo.Location = new Point(834, 24);
             rbtnNo.Name = "rbtnNo";
-            rbtnNo.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            rbtnNo.ShadowDecoration.CustomizableEdges = customizableEdges2;
             rbtnNo.Size = new Size(20, 20);
             rbtnNo.TabIndex = 11;
             rbtnNo.Text = "guna2CustomRadioButton2";
@@ -215,7 +191,7 @@
             rbtnNA.CheckedState.InnerColor = Color.FromArgb(143, 206, 218);
             rbtnNA.Location = new Point(937, 24);
             rbtnNA.Name = "rbtnNA";
-            rbtnNA.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            rbtnNA.ShadowDecoration.CustomizableEdges = customizableEdges1;
             rbtnNA.Size = new Size(20, 20);
             rbtnNA.TabIndex = 12;
             rbtnNA.Text = "guna2CustomRadioButton3";
@@ -226,7 +202,7 @@
             // 
             // btnSubmitEvalEmp
             // 
-            btnSubmitEvalEmp.CustomizableEdges = customizableEdges14;
+            btnSubmitEvalEmp.CustomizableEdges = customizableEdges12;
             btnSubmitEvalEmp.DisabledState.BorderColor = Color.DarkGray;
             btnSubmitEvalEmp.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSubmitEvalEmp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -240,7 +216,7 @@
             btnSubmitEvalEmp.HoverState.FillColor2 = Color.FromArgb(56, 84, 120);
             btnSubmitEvalEmp.Location = new Point(961, 658);
             btnSubmitEvalEmp.Name = "btnSubmitEvalEmp";
-            btnSubmitEvalEmp.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnSubmitEvalEmp.ShadowDecoration.CustomizableEdges = customizableEdges13;
             btnSubmitEvalEmp.Size = new Size(114, 32);
             btnSubmitEvalEmp.TabIndex = 10;
             btnSubmitEvalEmp.Text = "Submit";
@@ -255,7 +231,6 @@
             Controls.Add(pnlQuestionnaire);
             Controls.Add(btnNAEval);
             Controls.Add(btnNoEval);
-            Controls.Add(btnReturnEvalEmp);
             Controls.Add(btnYesEval);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -268,8 +243,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button btnReturnEvalEmp;
         private Guna.UI2.WinForms.Guna2Panel pnlQuestionnaire;
         private Label lblQuestionnaire;
         private Guna.UI2.WinForms.Guna2Button btnNoEval;

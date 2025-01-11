@@ -21,5 +21,10 @@ namespace Compass_AI
         {
 
         }
+
+        private void lvlReports_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
