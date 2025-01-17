@@ -78,5 +78,11 @@ namespace Compass_AI
             frmReports.Dock = DockStyle.Fill;
             frmReports.WindowState = FormWindowState.Maximized;
         }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            //close the login form
+            this.Close();
+        }
     }
 }

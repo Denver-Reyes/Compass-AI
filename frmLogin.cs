@@ -14,7 +14,7 @@ namespace Compass_AI
     public partial class frmLogin : Form
     {
         // Replace with your actual connection string
-        private string connectionString = "Server=sql12.freesqldatabase.com;Database=sql12755997;Uid=sql12755997;Pwd=S6vGcYJmU8;";
+        private string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
 
         public frmLogin()
         {
@@ -48,7 +48,7 @@ namespace Compass_AI
                 connection = new MySqlConnection(connectionString);
                 connection.Open();
 
-                string query = "SELECT COUNT(*) FROM tbl_users WHERE username = @username AND password = @password";
+                string query = "SELECT COUNT(*) FROM tblusers WHERE username = @username AND password = @password";
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
                     // Use parameterized queries to prevent SQL injection
@@ -88,6 +88,11 @@ namespace Compass_AI
                     connection.Close();
                 }
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

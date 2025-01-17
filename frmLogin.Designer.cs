@@ -173,6 +173,7 @@
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "COMPASS AI Login";
+            Load += frmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)picbxCOMPASSAILogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
