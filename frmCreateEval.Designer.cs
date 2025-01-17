@@ -45,16 +45,19 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateEval));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblCreateEval = new Label();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             btnEmployeEvalName = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtQuestion = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             btnEvalRefresh = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             btnEvalSubmit = new Guna.UI2.WinForms.Guna2Button();
             btnEvalDelete = new Guna.UI2.WinForms.Guna2Button();
             btnReturnCreateEval = new Guna.UI2.WinForms.Guna2Button();
+            btnQuestionSubmit = new Guna.UI2.WinForms.Guna2Button();
             guna2GradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -96,26 +99,27 @@
             btnEmployeEvalName.Size = new Size(200, 45);
             btnEmployeEvalName.TabIndex = 4;
             btnEmployeEvalName.Text = "Employee Name";
+            btnEmployeEvalName.Click += btnEmployeEvalName_Click;
             // 
-            // guna2TextBox1
+            // txtQuestion
             // 
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(313, 138);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(816, 36);
-            guna2TextBox1.TabIndex = 4;
+            txtQuestion.CustomizableEdges = customizableEdges5;
+            txtQuestion.DefaultText = "";
+            txtQuestion.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtQuestion.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtQuestion.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtQuestion.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtQuestion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQuestion.Font = new Font("Segoe UI", 9F);
+            txtQuestion.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQuestion.Location = new Point(313, 138);
+            txtQuestion.Name = "txtQuestion";
+            txtQuestion.PasswordChar = '\0';
+            txtQuestion.PlaceholderText = "";
+            txtQuestion.SelectedText = "";
+            txtQuestion.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtQuestion.Size = new Size(816, 36);
+            txtQuestion.TabIndex = 4;
             // 
             // label1
             // 
@@ -148,6 +152,7 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            guna2CustomGradientPanel1.AutoScroll = true;
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges9;
             guna2CustomGradientPanel1.Location = new Point(313, 226);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
@@ -171,6 +176,7 @@
             btnEvalSubmit.Size = new Size(91, 29);
             btnEvalSubmit.TabIndex = 8;
             btnEvalSubmit.Text = "Submit";
+            btnEvalSubmit.Click += btnEvalSubmit_Click;
             // 
             // btnEvalDelete
             // 
@@ -210,24 +216,44 @@
             btnReturnCreateEval.Size = new Size(45, 45);
             btnReturnCreateEval.TabIndex = 10;
             // 
+            // btnQuestionSubmit
+            // 
+            btnQuestionSubmit.CustomizableEdges = customizableEdges17;
+            btnQuestionSubmit.DisabledState.BorderColor = Color.DarkGray;
+            btnQuestionSubmit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnQuestionSubmit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnQuestionSubmit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnQuestionSubmit.FillColor = Color.FromArgb(0, 50, 0);
+            btnQuestionSubmit.Font = new Font("Segoe UI", 9F);
+            btnQuestionSubmit.ForeColor = Color.White;
+            btnQuestionSubmit.Location = new Point(1038, 180);
+            btnQuestionSubmit.Name = "btnQuestionSubmit";
+            btnQuestionSubmit.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnQuestionSubmit.Size = new Size(91, 29);
+            btnQuestionSubmit.TabIndex = 11;
+            btnQuestionSubmit.Text = "Submit";
+            btnQuestionSubmit.Click += btnQuestionSubmit_Click;
+            // 
             // frmCreateEval
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1176, 762);
+            Controls.Add(btnQuestionSubmit);
             Controls.Add(btnReturnCreateEval);
             Controls.Add(btnEvalDelete);
             Controls.Add(btnEvalSubmit);
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(btnEvalRefresh);
             Controls.Add(label1);
-            Controls.Add(guna2TextBox1);
+            Controls.Add(txtQuestion);
             Controls.Add(guna2GradientPanel1);
             Controls.Add(lblCreateEval);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmCreateEval";
             Text = "frmCreateEval";
+            Load += frmCreateEval_Load;
             guna2GradientPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -238,12 +264,13 @@
         private Label lblCreateEval;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2Button btnEmployeEvalName;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuestion;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button btnEvalRefresh;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Button btnEvalSubmit;
         private Guna.UI2.WinForms.Guna2Button btnEvalDelete;
         private Guna.UI2.WinForms.Guna2Button btnReturnCreateEval;
+        private Guna.UI2.WinForms.Guna2Button btnQuestionSubmit;
     }
 }
