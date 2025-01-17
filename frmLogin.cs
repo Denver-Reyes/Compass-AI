@@ -15,6 +15,7 @@ namespace Compass_AI
     {
         // Replace with your actual connection string
         private string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
+        public static string Username { get; set; }
 
         public frmLogin()
         {
@@ -59,6 +60,9 @@ namespace Compass_AI
                     if (count > 0)
                     {
                         MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // In frmLogin, after successful login
+                        Username = txtUsername.Text;
 
 
                         // Open the main form

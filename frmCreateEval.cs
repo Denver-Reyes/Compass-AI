@@ -199,17 +199,24 @@ namespace Compass_AI
 
         private void btnEvalSubmit_Click(object sender, EventArgs e)
         {
+            // Ensure an employee is selected
+            if (string.IsNullOrEmpty(selectedEmployeeName))
+            {
+                MessageBox.Show("Please select an employee before submitting the evaluation.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Collect all remaining questions
             List<string> remainingQuestions = new List<string>();
-            string employeeName = "Employee1"; // Replace with the actual employee name if it's dynamic
-            string createdBy = "Admin"; // Replace with the actual creator's name if needed
+            string employeeName = selectedEmployeeName; // Use the selected employee name
+            string createdBy = frmLogin.Username; // Assuming `frmLogin` has a public static property `Username`
 
             foreach (Control control in guna2CustomGradientPanel1.Controls)
             {
                 if (control is Guna2Button btn)
                 {
-                    // Assuming the question text is after "Question X: "
-                    string questionText = btn.Text.Split(':')[1].Trim();
+                    // Extract the question text after "Question X: "
+                    string questionText = btn.Text.Split(new[] { ':' }, 2)[1].Trim();
                     remainingQuestions.Add(questionText);
                 }
             }
@@ -220,8 +227,6 @@ namespace Compass_AI
                 try
                 {
                     // Define the MySQL connection
-                    string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
-
                     using (MySqlConnection connection = new MySqlConnection(connectionString))
                     {
                         connection.Open();
@@ -235,7 +240,7 @@ namespace Compass_AI
                                 command.Parameters.AddWithValue("@questionText", question);
                                 command.Parameters.AddWithValue("@createdFor", employeeName);
                                 command.Parameters.AddWithValue("@createdBy", createdBy);
-                                command.Parameters.AddWithValue("@createdDate", DateTime.Now); // Current timestamp
+                                command.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
                                 command.ExecuteNonQuery();
                             }
@@ -251,7 +256,7 @@ namespace Compass_AI
             }
             else
             {
-                MessageBox.Show("No questions to submit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No questions to submit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
