@@ -43,14 +43,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnReturnEvalSup = new Guna.UI2.WinForms.Guna2Button();
             lblEvalSupMenu = new Label();
-            btnSelectEmployee = new Guna.UI2.WinForms.Guna2Button();
+            btnConfirmbutton = new Guna.UI2.WinForms.Guna2Button();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             label1 = new Label();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            pnlEmployee = new Guna.UI2.WinForms.Guna2Panel();
             guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
             label2 = new Label();
-            guna2Panel1.SuspendLayout();
+            pnlEmployee.SuspendLayout();
             SuspendLayout();
             // 
             // btnReturnEvalSup
@@ -85,22 +85,23 @@
             lblEvalSupMenu.TabIndex = 5;
             lblEvalSupMenu.Text = "Select employee to evaluate";
             // 
-            // btnSelectEmployee
+            // btnConfirmbutton
             // 
-            btnSelectEmployee.CustomizableEdges = customizableEdges3;
-            btnSelectEmployee.DisabledState.BorderColor = Color.DarkGray;
-            btnSelectEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSelectEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSelectEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSelectEmployee.FillColor = Color.CadetBlue;
-            btnSelectEmployee.Font = new Font("Segoe UI", 9F);
-            btnSelectEmployee.ForeColor = Color.White;
-            btnSelectEmployee.Location = new Point(510, 446);
-            btnSelectEmployee.Name = "btnSelectEmployee";
-            btnSelectEmployee.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSelectEmployee.Size = new Size(180, 45);
-            btnSelectEmployee.TabIndex = 6;
-            btnSelectEmployee.Text = "Select Employee";
+            btnConfirmbutton.CustomizableEdges = customizableEdges3;
+            btnConfirmbutton.DisabledState.BorderColor = Color.DarkGray;
+            btnConfirmbutton.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnConfirmbutton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnConfirmbutton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnConfirmbutton.FillColor = Color.CadetBlue;
+            btnConfirmbutton.Font = new Font("Segoe UI", 9F);
+            btnConfirmbutton.ForeColor = Color.White;
+            btnConfirmbutton.Location = new Point(510, 446);
+            btnConfirmbutton.Name = "btnConfirmbutton";
+            btnConfirmbutton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnConfirmbutton.Size = new Size(180, 45);
+            btnConfirmbutton.TabIndex = 6;
+            btnConfirmbutton.Text = "Confirm";
+            btnConfirmbutton.Click += btnConfirmbutton_Click;
             // 
             // guna2ComboBox1
             // 
@@ -147,17 +148,17 @@
             label1.TabIndex = 8;
             label1.Text = "Select the task given";
             // 
-            // guna2Panel1
+            // pnlEmployee
             // 
-            guna2Panel1.Controls.Add(guna2ComboBox3);
-            guna2Panel1.Controls.Add(label2);
-            guna2Panel1.CustomizableEdges = customizableEdges11;
-            guna2Panel1.Location = new Point(607, 81);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel1.Size = new Size(465, 304);
-            guna2Panel1.TabIndex = 10;
-            guna2Panel1.Visible = false;
+            pnlEmployee.Controls.Add(guna2ComboBox3);
+            pnlEmployee.Controls.Add(label2);
+            pnlEmployee.CustomizableEdges = customizableEdges11;
+            pnlEmployee.Location = new Point(661, 89);
+            pnlEmployee.Name = "pnlEmployee";
+            pnlEmployee.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            pnlEmployee.Size = new Size(465, 304);
+            pnlEmployee.TabIndex = 10;
+            pnlEmployee.Visible = false;
             // 
             // guna2ComboBox3
             // 
@@ -189,23 +190,26 @@
             // 
             // frmEvaluationSup
             // 
+            AcceptButton = btnConfirmbutton;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(729, 511);
-            Controls.Add(guna2Panel1);
+            Controls.Add(pnlEmployee);
             Controls.Add(guna2ComboBox2);
             Controls.Add(label1);
             Controls.Add(guna2ComboBox1);
-            Controls.Add(btnSelectEmployee);
+            Controls.Add(btnConfirmbutton);
             Controls.Add(lblEvalSupMenu);
             Controls.Add(btnReturnEvalSup);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEvaluationSup";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Evaluation";
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
+            Load += frmEvaluationSup_Load;
+            pnlEmployee.ResumeLayout(false);
+            pnlEmployee.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -214,11 +218,11 @@
 
         private Guna.UI2.WinForms.Guna2Button btnReturnEvalSup;
         private Label lblEvalSupMenu;
-        private Guna.UI2.WinForms.Guna2Button btnSelectEmployee;
+        private Guna.UI2.WinForms.Guna2Button btnConfirmbutton;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel pnlEmployee;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
         private Label label2;
     }

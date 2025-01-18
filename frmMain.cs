@@ -128,6 +128,9 @@ namespace Compass_AI
             ResetButtonColors();
             btnEvaluation.FillColor = Color.CadetBlue;
 
+            frmEvaluationSup frmEvaluationSup= new frmEvaluationSup(userRole);
+            frmEvaluationSup.Show();
+
             frmEvaluationEmp frmEvaluationEmp = new frmEvaluationEmp();
             frmEvaluationEmp.MdiParent = this;
             frmEvaluationEmp.Show();
