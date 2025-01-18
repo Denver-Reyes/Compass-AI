@@ -61,15 +61,14 @@ namespace Compass_AI
                     {
                         MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // In frmLogin, after successful login
-                        Username = txtUsername.Text;
+                        // Set the logged-in username
+                        Username = username;
 
-
-                        // Open the main form
-                        frmMain mainForm = new frmMain();
+                        // Open the main form and pass the username
+                        frmMain mainForm = new frmMain(Username);
                         mainForm.Show();
 
-                        //close the login form
+                        // Close the login form
                         this.Hide();
 
 

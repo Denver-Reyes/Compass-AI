@@ -1,21 +1,118 @@
+using System;
+using MySql.Data.MySqlClient;
+using System.Drawing;
+using System.Windows.Forms;
+
 namespace Compass_AI
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        private string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
+        private string userRole;
+        private string loggedInUsername;
+
+        public frmMain(string username)
         {
             InitializeComponent();
+            loggedInUsername = username;
+        }
+
+        // RoleManager class to fetch user role
+        public class RoleManager
+        {
+            private readonly string connectionString;
+
+            public RoleManager(string connectionString)
+            {
+                this.connectionString = connectionString;
+            }
+
+            public string GetUserRole(string username)
+            {
+                string role = null;
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+                        string query = "SELECT role FROM tblusers WHERE username = @Username";
+
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@Username", username);
+
+                            object result = command.ExecuteScalar();
+                            if (result != null)
+                            {
+                                role = result.ToString();
+                            }
+                            else
+                            {
+                                throw new Exception("User not found or role not assigned.");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error retrieving role: {ex.Message}");
+                    }
+                }
+
+                return role;
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            ResetButtonColors();
-            CloseAllForms();
-        }
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
+            // Fetch the user role (example: "employee", "admin", "supervisor")
+            RoleManager roleManager = new RoleManager(connectionString);
+            userRole = roleManager.GetUserRole(loggedInUsername);
 
+            if (string.IsNullOrEmpty(userRole))
+            {
+                MessageBox.Show("User role could not be determined.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Adjust UI based on role
+            AdjustUIBasedOnRole(userRole);
         }
+
+        // Adjust UI visibility based on user role
+        private void AdjustUIBasedOnRole(string role)
+        {
+            switch (role.ToLower())
+            {
+                case "employee":
+                    btnCreateEval.Visible = false;
+                    btnReports.Visible = false;
+                    break;
+
+                case "supervisor":
+                    btnReports.Visible = false;
+                    break;
+
+                case "admin":
+                    // Admin sees everything; no changes needed
+                    break;
+
+                default:
+                    MessageBox.Show("Unknown role type. Please check user settings.");
+                    break;
+            }
+        }
+
+        // Close all child forms
+        private void CloseAllForms()
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+        }
+
+        // Reset button colors
         private void ResetButtonColors()
         {
             btnEvaluation.FillColor = Color.Transparent;
@@ -24,23 +121,17 @@ namespace Compass_AI
             btnReports.FillColor = Color.Transparent;
         }
 
-        private void CloseAllForms()
-        {
-            foreach (Form form in this.MdiChildren)
-            {
-                form.Close();
-            }
-        }
+        // Button click handlers for opening child forms
         private void btnEvaluation_Click(object sender, EventArgs e)
         {
             CloseAllForms();
             ResetButtonColors();
             btnEvaluation.FillColor = Color.CadetBlue;
+
             frmEvaluationEmp frmEvaluationEmp = new frmEvaluationEmp();
-            frmEvaluationEmp.MdiParent = frmMain.ActiveForm;
+            frmEvaluationEmp.MdiParent = this;
             frmEvaluationEmp.Show();
             frmEvaluationEmp.Dock = DockStyle.Fill;
-            frmEvaluationEmp.WindowState = FormWindowState.Maximized;
         }
 
         private void btnLeaderboard_Click(object sender, EventArgs e)
@@ -48,41 +139,47 @@ namespace Compass_AI
             CloseAllForms();
             ResetButtonColors();
             btnLeaderboard.FillColor = Color.CadetBlue;
+
             frmLeaderboard frmLeaderboard = new frmLeaderboard();
-            frmLeaderboard.MdiParent = frmMain.ActiveForm;
+            frmLeaderboard.MdiParent = this;
             frmLeaderboard.Show();
             frmLeaderboard.Dock = DockStyle.Fill;
-            frmLeaderboard.WindowState = FormWindowState.Maximized;
         }
 
         private void btnCreateEval_Click(object sender, EventArgs e)
         {
+            if (userRole == "employee")
+            {
+                MessageBox.Show("Access denied.");
+                return;
+            }
+
             CloseAllForms();
             ResetButtonColors();
             btnCreateEval.FillColor = Color.CadetBlue;
+
             frmCreateEval frmCreateEval = new frmCreateEval();
-            frmCreateEval.MdiParent = frmMain.ActiveForm;
+            frmCreateEval.MdiParent = this;
             frmCreateEval.Show();
             frmCreateEval.Dock = DockStyle.Fill;
-            frmCreateEval.WindowState = FormWindowState.Maximized;
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
+            if (userRole == "employee")
+            {
+                MessageBox.Show("Access denied.");
+                return;
+            }
+
             CloseAllForms();
             ResetButtonColors();
             btnReports.FillColor = Color.CadetBlue;
+
             frmReports frmReports = new frmReports();
-            frmReports.MdiParent = frmMain.ActiveForm;
+            frmReports.MdiParent = this;
             frmReports.Show();
             frmReports.Dock = DockStyle.Fill;
-            frmReports.WindowState = FormWindowState.Maximized;
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-            //close the login form
-            this.Close();
         }
     }
 }
