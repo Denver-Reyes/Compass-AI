@@ -171,21 +171,39 @@ namespace Compass_AI
             // Handle btnEvalDelete click event
             btnEvalDelete.Click += (s, ev) =>
             {
-
                 if (selectedButton != null)
                 {
                     // Remove the selected button from the panel
                     guna2CustomGradientPanel1.Controls.Remove(selectedButton);
 
-                    // Reset selectedButton reference
+                    // Reset the selected button reference
                     selectedButton = null;
 
-                    // Recalculate button positions and update their text with new question numbers
-                    int yOffset = 10;
-                    questionNumber--;
+                    // Recalculate button positions
+                    int yOffset = 10; // Initial offset for the first button
+                    int questionIndex = 1; // Reset question numbering
+
+                    foreach (Control control in guna2CustomGradientPanel1.Controls)
+                    {
+                        if (control is Guna2Button btn)
+                        {
+                            // Update button text with new question number
+                            btn.Text = $"Question {questionIndex}: {btn.Text.Split(new[] { ':' }, 2)[1].Trim()}";
+
+                            // Update button position
+                            btn.Location = new Point(10, yOffset);
+
+                            // Increment the offset and question index
+                            yOffset += 50;
+                            questionIndex++;
+                        }
+                    }
+
+                    // Adjust question number for new additions
+                    questionNumber = questionIndex;
+
                     MessageBox.Show("Question deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
             };
 
             // Clear the textbox for the next question
