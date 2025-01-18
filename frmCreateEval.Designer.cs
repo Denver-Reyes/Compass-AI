@@ -60,7 +60,7 @@
             btnReturnCreateEval = new Guna.UI2.WinForms.Guna2Button();
             btnQuestionSubmit = new Guna.UI2.WinForms.Guna2Button();
             lblTaskName = new Label();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtQuestionSet = new Guna.UI2.WinForms.Guna2TextBox();
             guna2GradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -237,25 +237,25 @@
             lblTaskName.TabIndex = 13;
             lblTaskName.Text = "Enter the task name";
             // 
-            // guna2TextBox1
+            // txtQuestionSet
             // 
-            guna2TextBox1.CustomizableEdges = customizableEdges19;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(313, 86);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2TextBox1.Size = new Size(816, 36);
-            guna2TextBox1.TabIndex = 12;
+            txtQuestionSet.CustomizableEdges = customizableEdges19;
+            txtQuestionSet.DefaultText = "";
+            txtQuestionSet.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtQuestionSet.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtQuestionSet.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtQuestionSet.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtQuestionSet.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQuestionSet.Font = new Font("Segoe UI", 9F);
+            txtQuestionSet.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtQuestionSet.Location = new Point(313, 86);
+            txtQuestionSet.Name = "txtQuestionSet";
+            txtQuestionSet.PasswordChar = '\0';
+            txtQuestionSet.PlaceholderText = "";
+            txtQuestionSet.SelectedText = "";
+            txtQuestionSet.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtQuestionSet.Size = new Size(816, 36);
+            txtQuestionSet.TabIndex = 12;
             // 
             // frmCreateEval
             // 
@@ -265,7 +265,7 @@
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1176, 762);
             Controls.Add(lblTaskName);
-            Controls.Add(guna2TextBox1);
+            Controls.Add(txtQuestionSet);
             Controls.Add(btnQuestionSubmit);
             Controls.Add(btnReturnCreateEval);
             Controls.Add(btnEvalDelete);
@@ -296,6 +296,6 @@
         private Guna.UI2.WinForms.Guna2Button btnReturnCreateEval;
         private Guna.UI2.WinForms.Guna2Button btnQuestionSubmit;
         private Label lblTaskName;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuestionSet;
     }
 }

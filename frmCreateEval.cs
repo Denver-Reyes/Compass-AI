@@ -132,19 +132,25 @@ namespace Compass_AI
                 return;
             }
 
+            // Measure the text size based on the button's font
+            Size textSize = TextRenderer.MeasureText($"Question {questionNumber}: {questionText}", new System.Drawing.Font("Segoe UI", 10));
+
+            // Set a minimum width for the button to avoid it being too narrow
+            int minWidth = 400;
+            int buttonWidth = Math.Max(minWidth, textSize.Width + 20); // Add some padding for aesthetics
+
             // Create a new button for the question
             Guna2Button btnQuestion = new Guna2Button
             {
                 Text = $"Question {questionNumber}: {questionText}", // Use the auto-incremented question number
                 AutoSize = false,
-                Size = new System.Drawing.Size(400, 40), // Set a fixed size for the button
+                Size = new System.Drawing.Size(buttonWidth, 40), // Use the calculated width
                 Font = new System.Drawing.Font("Segoe UI", 10),
                 Location = new System.Drawing.Point(10, guna2CustomGradientPanel1.Controls.Count * 50 + 10), // Adjust position dynamically
                 ForeColor = System.Drawing.Color.Black,
                 FillColor = System.Drawing.Color.LightBlue,
                 BorderRadius = 10, // Optional rounded corners
                 TextAlign = HorizontalAlignment.Left // Align the text to the left
-
             };
 
             // Increment the question number for the next question
@@ -224,10 +230,18 @@ namespace Compass_AI
                 return;
             }
 
+            // Ensure question set is provided
+            if (string.IsNullOrWhiteSpace(txtQuestionSet.Text))
+            {
+                MessageBox.Show("Please provide a valid question set name before submitting.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Collect all remaining questions
             List<string> remainingQuestions = new List<string>();
             string employeeName = selectedEmployeeName; // Use the selected employee name
             string createdBy = frmLogin.Username; // Assuming `frmLogin` has a public static property `Username`
+            string questionSet = txtQuestionSet.Text.Trim(); // Get the question set value
 
             foreach (Control control in guna2CustomGradientPanel1.Controls)
             {
@@ -251,11 +265,12 @@ namespace Compass_AI
 
                         foreach (string question in remainingQuestions)
                         {
-                            string query = "INSERT INTO tblquestions (questionText, created_for, created_by, created_date) VALUES (@questionText, @createdFor, @createdBy, @createdDate)";
+                            string query = "INSERT INTO tblquestions (questionText, questionSet, created_for, created_by, created_date) VALUES (@questionText, @questionSet, @createdFor, @createdBy, @createdDate)";
 
                             using (MySqlCommand command = new MySqlCommand(query, connection))
                             {
                                 command.Parameters.AddWithValue("@questionText", question);
+                                command.Parameters.AddWithValue("@questionSet", questionSet); // Add question set to the query
                                 command.Parameters.AddWithValue("@createdFor", employeeName);
                                 command.Parameters.AddWithValue("@createdBy", createdBy);
                                 command.Parameters.AddWithValue("@createdDate", DateTime.Now);
@@ -277,6 +292,7 @@ namespace Compass_AI
                 MessageBox.Show("No questions to submit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
     }
 
