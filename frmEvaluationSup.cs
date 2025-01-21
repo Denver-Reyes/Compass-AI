@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient; // Ensure you have the MySQL.Data package installed
 
 namespace Compass_AI
 {
     public partial class frmEvaluationSup : Form
     {
         private string userRole;
+        private string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
 
         public frmEvaluationSup(string role)
         {
@@ -31,11 +28,95 @@ namespace Compass_AI
             {
                 pnlEmployee.Visible = false;             // Hide the panel for non-employees
             }
+
+            LoadEmployeeData();
+
+            // Call LoadTaskData() with the first employee or a default employee name
+            if (cmbEmployeeEval.Items.Count > 0)
+            {
+                string firstEmployee = cmbEmployeeEval.Items[0].ToString();
+                LoadTaskData(firstEmployee);
+            }
+        }
+
+
+        private void LoadEmployeeData()
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Query to get all employees
+                    string query = "SELECT username FROM tblusers WHERE role = 'employee'";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                cmbEmployeeEval.Items.Add(reader["username"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading employee data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cmbEmployeeEval_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedEmployee = cmbEmployeeEval.SelectedItem.ToString();
+            LoadTaskData(selectedEmployee);
+        }
+
+        private void LoadTaskData(string employeeName)
+        {
+            cmbTaskGiven.Items.Clear(); // Clear previous items
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Query to get questionSet corresponding to the selected employee
+                    string query = @"
+                        SELECT DISTINCT questionSet 
+                        FROM tblquestions 
+                        WHERE created_for = @employeeName";
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@employeeName", employeeName);
+
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                cmbTaskGiven.Items.Add(reader["questionSet"].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading task data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnConfirmbutton_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void pnlEmployee_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }
