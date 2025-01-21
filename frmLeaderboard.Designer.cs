@@ -343,6 +343,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1144, 684);
             Controls.Add(guna2Panel5);

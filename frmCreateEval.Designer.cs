@@ -103,6 +103,7 @@
             txtQuestion.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtQuestion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtQuestion.Font = new Font("Segoe UI", 9F);
+            txtQuestion.ForeColor = Color.Black;
             txtQuestion.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtQuestion.Location = new Point(313, 170);
             txtQuestion.Name = "txtQuestion";
@@ -247,6 +248,7 @@
             txtQuestionSet.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtQuestionSet.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtQuestionSet.Font = new Font("Segoe UI", 9F);
+            txtQuestionSet.ForeColor = Color.Black;
             txtQuestionSet.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtQuestionSet.Location = new Point(313, 86);
             txtQuestionSet.Name = "txtQuestionSet";
