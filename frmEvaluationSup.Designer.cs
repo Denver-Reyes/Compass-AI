@@ -137,7 +137,6 @@
             cmbTaskGiven.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cmbTaskGiven.Size = new Size(331, 36);
             cmbTaskGiven.TabIndex = 9;
-            cmbTaskGiven.SelectedIndexChanged += cmbEmployeeEval_SelectedIndexChanged;
             // 
             // label1
             // 

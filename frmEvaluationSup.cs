@@ -29,10 +29,8 @@ namespace Compass_AI
                 pnlEmployee.Visible = false;             // Hide the panel for non-employees
             }
 
-            LoadEmployeeData(); // Load employee data as before
+            LoadEmployeeData();
         }
-
-
 
         private void LoadEmployeeData()
         {
@@ -64,21 +62,15 @@ namespace Compass_AI
 
         private void cmbEmployeeEval_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Check if there is a valid selected employee
-            string selectedEmployee = cmbEmployeeEval.SelectedItem?.ToString();
-            if (!string.IsNullOrEmpty(selectedEmployee))
-            {
-                // Clear previous tasks to avoid showing tasks for a previous selection
-                cmbTaskGiven.Items.Clear();
+            string selectedEmployee = cmbEmployeeEval.SelectedItem.ToString();
+            LoadTaskData(selectedEmployee);
 
-                // Call LoadTaskData with the selected employee
-                LoadTaskData(selectedEmployee);
-            }
         }
-
 
         private void LoadTaskData(string employeeName)
         {
+
+            cmbTaskGiven.Items.Clear(); // Clear previous items
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -87,9 +79,9 @@ namespace Compass_AI
 
                     // Query to get questionSet corresponding to the selected employee
                     string query = @"
-                SELECT DISTINCT questionSet 
-                FROM tblquestions 
-                WHERE created_for = @employeeName";
+                        SELECT DISTINCT questionSet 
+                        FROM tblquestions 
+                        WHERE created_for = @employeeName";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -97,10 +89,6 @@ namespace Compass_AI
 
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-                            // Clear previous items before adding new data
-                            cmbTaskGiven.Items.Clear();
-
-                            // Populate cmbTaskGiven with new task data for the selected employee
                             while (reader.Read())
                             {
                                 cmbTaskGiven.Items.Add(reader["questionSet"].ToString());
@@ -115,8 +103,6 @@ namespace Compass_AI
             }
         }
 
-
-
         private void btnConfirmbutton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -125,5 +111,7 @@ namespace Compass_AI
         private void pnlEmployee_Paint(object sender, PaintEventArgs e)
         {
         }
+
+      
     }
 }
