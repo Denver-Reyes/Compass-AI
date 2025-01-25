@@ -46,7 +46,7 @@
             rbtnNA = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             rbtnNo = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             rbtnYes = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            lvlQueNo = new Label();
+            lblQueNo = new Label();
             lblQuestionnaire = new Label();
             btnNoEval = new Guna.UI2.WinForms.Guna2Button();
             btnNAEval = new Guna.UI2.WinForms.Guna2Button();
@@ -61,7 +61,7 @@
             pnlQuestionnaire.Controls.Add(rbtnNA);
             pnlQuestionnaire.Controls.Add(rbtnNo);
             pnlQuestionnaire.Controls.Add(rbtnYes);
-            pnlQuestionnaire.Controls.Add(lvlQueNo);
+            pnlQuestionnaire.Controls.Add(lblQueNo);
             pnlQuestionnaire.Controls.Add(lblQuestionnaire);
             pnlQuestionnaire.CustomizableEdges = customizableEdges4;
             pnlQuestionnaire.Location = new Point(71, 72);
@@ -69,6 +69,7 @@
             pnlQuestionnaire.ShadowDecoration.CustomizableEdges = customizableEdges5;
             pnlQuestionnaire.Size = new Size(991, 66);
             pnlQuestionnaire.TabIndex = 6;
+            pnlQuestionnaire.Visible = false;
             // 
             // rbtnNA
             // 
@@ -121,16 +122,16 @@
             rbtnYes.UncheckedState.FillColor = Color.Transparent;
             rbtnYes.UncheckedState.InnerColor = Color.Transparent;
             // 
-            // lvlQueNo
+            // lblQueNo
             // 
-            lvlQueNo.AutoSize = true;
-            lvlQueNo.Font = new Font("Segoe UI", 20F);
-            lvlQueNo.ForeColor = Color.FromArgb(40, 90, 114);
-            lvlQueNo.Location = new Point(18, 15);
-            lvlQueNo.Name = "lvlQueNo";
-            lvlQueNo.Size = new Size(53, 37);
-            lvlQueNo.TabIndex = 10;
-            lvlQueNo.Text = "Q#";
+            lblQueNo.AutoSize = true;
+            lblQueNo.Font = new Font("Segoe UI", 20F);
+            lblQueNo.ForeColor = Color.FromArgb(40, 90, 114);
+            lblQueNo.Location = new Point(18, 15);
+            lblQueNo.Name = "lblQueNo";
+            lblQueNo.Size = new Size(53, 37);
+            lblQueNo.TabIndex = 10;
+            lblQueNo.Text = "Q#";
             // 
             // lblQuestionnaire
             // 
@@ -248,7 +249,7 @@
         private Guna.UI2.WinForms.Guna2Button btnNoEval;
         private Guna.UI2.WinForms.Guna2Button btnNAEval;
         private Guna.UI2.WinForms.Guna2Button btnYesEval;
-        private Label lvlQueNo;
+        private Label lblQueNo;
         private Guna.UI2.WinForms.Guna2CustomRadioButton rbtnYes;
         private Guna.UI2.WinForms.Guna2CustomRadioButton rbtnNA;
         private Guna.UI2.WinForms.Guna2CustomRadioButton rbtnNo;

@@ -124,18 +124,17 @@ namespace Compass_AI
         // Button click handlers for opening child forms
         private void btnEvaluation_Click(object sender, EventArgs e)
         {
-            CloseAllForms();
-            ResetButtonColors();
-            btnEvaluation.FillColor = Color.CadetBlue;
+            CloseAllForms();  // Close any currently opened forms
+            ResetButtonColors();  // Reset button colors
+            btnEvaluation.FillColor = Color.CadetBlue;  // Highlight this button
 
-            frmEvaluationEmp frmEvaluationEmp = new frmEvaluationEmp();
-            frmEvaluationEmp.MdiParent = this;
-            frmEvaluationEmp.Show();
-            frmEvaluationEmp.Dock = DockStyle.Fill;
-
-            frmEvaluationSup frmEvaluationSup = new frmEvaluationSup(userRole);
+            // Now, we instantiate and show frmEvaluationSup, passing the necessary parameters
+            frmEvaluationSup frmEvaluationSup = new frmEvaluationSup(loggedInUsername);  // Assuming username is passed to this form
+            frmEvaluationSup.MdiParent = this;  // MDI parent is frmMain
             frmEvaluationSup.Show();
+            frmEvaluationSup.Dock = DockStyle.Fill;
         }
+
 
         private void btnLeaderboard_Click(object sender, EventArgs e)
         {

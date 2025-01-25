@@ -103,15 +103,31 @@ namespace Compass_AI
             }
         }
 
-        private void btnConfirmbutton_Click(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            string selectedEmployee = cmbEmployeeEval.SelectedItem?.ToString();
+            string selectedTask = cmbTaskGiven.SelectedItem?.ToString();
+
+            // Ensure both employee and task are selected before proceeding
+            if (string.IsNullOrEmpty(selectedEmployee) || string.IsNullOrEmpty(selectedTask))
+            {
+                MessageBox.Show("Please select both an employee and a task.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Pass the selected employee and task to frmEvaluationEmp
+            frmEvaluationEmp frmEvaluationEmp = new frmEvaluationEmp(selectedEmployee, selectedTask);
+            frmEvaluationEmp.MdiParent = this.MdiParent;  // Ensure MDI structure is maintained
+            frmEvaluationEmp.Show();
+            frmEvaluationEmp.Dock = DockStyle.Fill;
         }
+
+
 
         private void pnlEmployee_Paint(object sender, PaintEventArgs e)
         {
         }
 
-      
+        
     }
 }

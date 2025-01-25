@@ -101,7 +101,7 @@
             btnConfirmbutton.Size = new Size(180, 45);
             btnConfirmbutton.TabIndex = 6;
             btnConfirmbutton.Text = "Confirm";
-            btnConfirmbutton.Click += btnConfirmbutton_Click;
+            btnConfirmbutton.Click += btnConfirm_Click;
             // 
             // cmbEmployeeEval
             // 
