@@ -183,5 +183,20 @@ namespace Compass_AI
             frmReports.Show();
             frmReports.Dock = DockStyle.Fill;
         }
+
+        private void btnMainLogout_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Close the current form (frmMain)
+                this.Close();
+
+                // Show the login form
+                frmLogin loginForm = new frmLogin();
+                loginForm.Show();
+            }
+        }
     }
 }
