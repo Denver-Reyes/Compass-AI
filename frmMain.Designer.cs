@@ -50,7 +50,7 @@
             gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            btnMainLogout = new Guna.UI2.WinForms.Guna2Button();
             btnReports = new Guna.UI2.WinForms.Guna2Button();
             btnCreateEval = new Guna.UI2.WinForms.Guna2Button();
             btnWIP = new Guna.UI2.WinForms.Guna2Button();
@@ -74,7 +74,7 @@
             // 
             guna2GradientPanel1.BackColor = SystemColors.Control;
             guna2GradientPanel1.Controls.Add(guna2PictureBox2);
-            guna2GradientPanel1.Controls.Add(guna2Button6);
+            guna2GradientPanel1.Controls.Add(btnMainLogout);
             guna2GradientPanel1.Controls.Add(btnReports);
             guna2GradientPanel1.Controls.Add(btnCreateEval);
             guna2GradientPanel1.Controls.Add(btnWIP);
@@ -108,26 +108,27 @@
             guna2PictureBox2.TabIndex = 1;
             guna2PictureBox2.TabStop = false;
             // 
-            // guna2Button6
+            // btnMainLogout
             // 
-            guna2Button6.BackColor = Color.Transparent;
-            guna2Button6.BorderRadius = 1;
-            guna2Button6.BorderThickness = 2;
-            guna2Button6.CustomizableEdges = customizableEdges3;
-            guna2Button6.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button6.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button6.FillColor = Color.Transparent;
-            guna2Button6.Font = new Font("Segoe UI", 9F);
-            guna2Button6.ForeColor = Color.White;
-            guna2Button6.Image = Properties.Resources.logout;
-            guna2Button6.ImageSize = new Size(27, 27);
-            guna2Button6.Location = new Point(1103, 12);
-            guna2Button6.Name = "guna2Button6";
-            guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button6.Size = new Size(45, 45);
-            guna2Button6.TabIndex = 2;
+            btnMainLogout.BackColor = Color.Transparent;
+            btnMainLogout.BorderRadius = 1;
+            btnMainLogout.BorderThickness = 2;
+            btnMainLogout.CustomizableEdges = customizableEdges3;
+            btnMainLogout.DisabledState.BorderColor = Color.DarkGray;
+            btnMainLogout.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnMainLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnMainLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMainLogout.FillColor = Color.Transparent;
+            btnMainLogout.Font = new Font("Segoe UI", 9F);
+            btnMainLogout.ForeColor = Color.White;
+            btnMainLogout.Image = Properties.Resources.logout;
+            btnMainLogout.ImageSize = new Size(27, 27);
+            btnMainLogout.Location = new Point(1103, 12);
+            btnMainLogout.Name = "btnMainLogout";
+            btnMainLogout.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnMainLogout.Size = new Size(45, 45);
+            btnMainLogout.TabIndex = 2;
+            btnMainLogout.Click += btnMainLogout_Click;
             // 
             // btnReports
             // 
@@ -281,7 +282,7 @@
         private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btnMainLogout;
         private Guna.UI2.WinForms.Guna2Button btnReports;
         private Guna.UI2.WinForms.Guna2Button btnCreateEval;
         private Guna.UI2.WinForms.Guna2Button btnWIP;
