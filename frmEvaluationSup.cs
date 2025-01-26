@@ -8,7 +8,8 @@ namespace Compass_AI
 {
     public partial class frmEvaluationSup : Form
     {
-        private string userRole;
+        public static string userRole { get; set; }
+
         private string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
 
         public frmEvaluationSup(string role)

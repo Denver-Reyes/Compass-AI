@@ -221,6 +221,7 @@
             btnSubmitEvalEmp.Size = new Size(114, 32);
             btnSubmitEvalEmp.TabIndex = 10;
             btnSubmitEvalEmp.Text = "Submit";
+            btnSubmitEvalEmp.Click += btnSubmitEvalEmp_Click;
             // 
             // frmEvaluationEmp
             // 
