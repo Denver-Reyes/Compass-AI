@@ -8,19 +8,19 @@ namespace Compass_AI
 {
     public partial class frmEvaluationSup : Form
     {
-        public static string userRole { get; set; }
+        public static string UserRole { get; set; }
 
         private string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
 
         public frmEvaluationSup(string role)
         {
             InitializeComponent();
-            userRole = role;
+            UserRole = role;
         }
 
         private void frmEvaluationSup_Load(object sender, EventArgs e)
         {
-            if (userRole == "employee")
+            if (UserRole == "employee")
             {
                 pnlEmployee.Location = new Point(119, 67); // Set the panel's location
                 pnlEmployee.Visible = true;              // Make the panel visible

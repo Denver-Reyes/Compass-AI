@@ -208,7 +208,7 @@ namespace Compass_AI
                             {
                                 // Assign parameters for the query
                                 command.Parameters.AddWithValue("@answer", answer);
-                                command.Parameters.AddWithValue("@role", frmEvaluationSup.userRole); // Replace with the appropriate role logic
+                                command.Parameters.AddWithValue("@role", frmLogin.UserRole); // Replace with the appropriate role logic
                                 command.Parameters.AddWithValue("@answeredBy", frmLogin.Username); // Replace with the logged-in user's username
                                 command.Parameters.AddWithValue("@questionID", questionID);
                                 command.Parameters.AddWithValue("@answeredDate", DateTime.Now);
