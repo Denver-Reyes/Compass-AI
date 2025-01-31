@@ -77,7 +77,6 @@
             txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtUsername.Size = new Size(200, 36);
             txtUsername.TabIndex = 1;
-            txtUsername.TextChanged += guna2TextBox1_TextChanged;
             // 
             // txtPassword
             // 

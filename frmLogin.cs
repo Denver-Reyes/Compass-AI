@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -15,21 +8,14 @@ namespace Compass_AI
     {
         // Replace with your actual connection string
         private string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
+
+        // Properties to store the logged-in user's details
         public static string Username { get; set; }
+        public static string UserRole { get; set; }
 
         public frmLogin()
         {
             InitializeComponent();
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            // Optional: Handle text changed event if needed
-        }
-
-        private void picbxCOMPASSAILogo_Click(object sender, EventArgs e)
-        {
-            // Optional: Add functionality for logo click if needed
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -49,33 +35,36 @@ namespace Compass_AI
                 connection = new MySqlConnection(connectionString);
                 connection.Open();
 
-                string query = "SELECT COUNT(*) FROM tblusers WHERE username = @username AND password = @password";
+                // Query to retrieve username and role if the credentials are valid
+                string query = "SELECT username, role FROM tblusers WHERE username = @username AND password = @password";
+
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
                     // Use parameterized queries to prevent SQL injection
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
 
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    if (count > 0)
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (reader.Read())
+                        {
+                            // Retrieve and store the username and role
+                            Username = reader["username"].ToString();
+                            UserRole = reader["role"].ToString();
 
-                        // Set the logged-in username
-                        Username = username;
+                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Open the main form and pass the username
-                        frmMain mainForm = new frmMain(Username);
-                        mainForm.Show();
+                            // Open the main form and pass the username
+                            frmMain mainForm = new frmMain(Username);
+                            mainForm.Show();
 
-                        // Close the login form
-                        this.Hide();
-
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // Hide the login form
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid username or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -94,6 +83,10 @@ namespace Compass_AI
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void picbxCOMPASSAILogo_Click(object sender, EventArgs e)
         {
 
         }
