@@ -101,7 +101,7 @@
             guna2PictureBox2.ImageLocation = "";
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.InitialImage = Properties.Resources.Untitled_design__6_;
-            guna2PictureBox2.Location = new Point(171, 9);
+            guna2PictureBox2.Location = new Point(168, 9);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2PictureBox2.Size = new Size(496, 70);

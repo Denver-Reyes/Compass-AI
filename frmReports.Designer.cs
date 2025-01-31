@@ -32,14 +32,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReports));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lvlReports = new Label();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             lblDash = new Label();
-            btnReturnRandA = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // lvlReports
@@ -97,34 +94,12 @@
             lblDash.TabIndex = 3;
             lblDash.Text = "-";
             // 
-            // btnReturnRandA
-            // 
-            btnReturnRandA.BackColor = Color.CadetBlue;
-            btnReturnRandA.BorderRadius = 1;
-            btnReturnRandA.BorderThickness = 2;
-            btnReturnRandA.CustomizableEdges = customizableEdges5;
-            btnReturnRandA.DisabledState.BorderColor = Color.DarkGray;
-            btnReturnRandA.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnReturnRandA.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnReturnRandA.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnReturnRandA.FillColor = Color.Transparent;
-            btnReturnRandA.Font = new Font("Segoe UI", 9F);
-            btnReturnRandA.ForeColor = Color.White;
-            btnReturnRandA.Image = (Image)resources.GetObject("btnReturnRandA.Image");
-            btnReturnRandA.ImageSize = new Size(27, 27);
-            btnReturnRandA.Location = new Point(1084, 12);
-            btnReturnRandA.Name = "btnReturnRandA";
-            btnReturnRandA.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnReturnRandA.Size = new Size(45, 45);
-            btnReturnRandA.TabIndex = 4;
-            // 
             // frmReports
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1176, 762);
-            Controls.Add(btnReturnRandA);
             Controls.Add(lblDash);
             Controls.Add(guna2DateTimePicker2);
             Controls.Add(guna2DateTimePicker1);
@@ -145,6 +120,5 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private Label lblDash;
-        private Guna.UI2.WinForms.Guna2Button btnReturnRandA;
     }
 }

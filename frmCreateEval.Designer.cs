@@ -43,12 +43,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateEval));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             btnEmployeEvalName = new Guna.UI2.WinForms.Guna2Button();
             txtQuestion = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,7 +54,6 @@
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             btnEvalSubmit = new Guna.UI2.WinForms.Guna2Button();
             btnEvalDelete = new Guna.UI2.WinForms.Guna2Button();
-            btnReturnCreateEval = new Guna.UI2.WinForms.Guna2Button();
             btnQuestionSubmit = new Guna.UI2.WinForms.Guna2Button();
             lblTaskName = new Label();
             txtQuestionSet = new Guna.UI2.WinForms.Guna2TextBox();
@@ -188,30 +184,9 @@
             btnEvalDelete.TabIndex = 9;
             btnEvalDelete.Text = "Delete";
             // 
-            // btnReturnCreateEval
-            // 
-            btnReturnCreateEval.BackColor = Color.CadetBlue;
-            btnReturnCreateEval.BorderRadius = 1;
-            btnReturnCreateEval.BorderThickness = 2;
-            btnReturnCreateEval.CustomizableEdges = customizableEdges15;
-            btnReturnCreateEval.DisabledState.BorderColor = Color.DarkGray;
-            btnReturnCreateEval.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnReturnCreateEval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnReturnCreateEval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnReturnCreateEval.FillColor = Color.Transparent;
-            btnReturnCreateEval.Font = new Font("Segoe UI", 9F);
-            btnReturnCreateEval.ForeColor = Color.White;
-            btnReturnCreateEval.Image = (Image)resources.GetObject("btnReturnCreateEval.Image");
-            btnReturnCreateEval.ImageSize = new Size(27, 27);
-            btnReturnCreateEval.Location = new Point(1084, 12);
-            btnReturnCreateEval.Name = "btnReturnCreateEval";
-            btnReturnCreateEval.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnReturnCreateEval.Size = new Size(45, 45);
-            btnReturnCreateEval.TabIndex = 10;
-            // 
             // btnQuestionSubmit
             // 
-            btnQuestionSubmit.CustomizableEdges = customizableEdges17;
+            btnQuestionSubmit.CustomizableEdges = customizableEdges15;
             btnQuestionSubmit.DisabledState.BorderColor = Color.DarkGray;
             btnQuestionSubmit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnQuestionSubmit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -221,7 +196,7 @@
             btnQuestionSubmit.ForeColor = Color.White;
             btnQuestionSubmit.Location = new Point(1038, 212);
             btnQuestionSubmit.Name = "btnQuestionSubmit";
-            btnQuestionSubmit.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnQuestionSubmit.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnQuestionSubmit.Size = new Size(91, 29);
             btnQuestionSubmit.TabIndex = 11;
             btnQuestionSubmit.Text = "Submit";
@@ -240,7 +215,7 @@
             // 
             // txtQuestionSet
             // 
-            txtQuestionSet.CustomizableEdges = customizableEdges19;
+            txtQuestionSet.CustomizableEdges = customizableEdges17;
             txtQuestionSet.DefaultText = "";
             txtQuestionSet.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtQuestionSet.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -255,7 +230,7 @@
             txtQuestionSet.PasswordChar = '\0';
             txtQuestionSet.PlaceholderText = "";
             txtQuestionSet.SelectedText = "";
-            txtQuestionSet.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtQuestionSet.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtQuestionSet.Size = new Size(816, 36);
             txtQuestionSet.TabIndex = 12;
             // 
@@ -269,7 +244,6 @@
             Controls.Add(lblTaskName);
             Controls.Add(txtQuestionSet);
             Controls.Add(btnQuestionSubmit);
-            Controls.Add(btnReturnCreateEval);
             Controls.Add(btnEvalDelete);
             Controls.Add(btnEvalSubmit);
             Controls.Add(guna2CustomGradientPanel1);
@@ -295,7 +269,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Button btnEvalSubmit;
         private Guna.UI2.WinForms.Guna2Button btnEvalDelete;
-        private Guna.UI2.WinForms.Guna2Button btnReturnCreateEval;
         private Guna.UI2.WinForms.Guna2Button btnQuestionSubmit;
         private Label lblTaskName;
         private Guna.UI2.WinForms.Guna2TextBox txtQuestionSet;
