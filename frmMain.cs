@@ -198,5 +198,17 @@ namespace Compass_AI
                 loginForm.Show();
             }
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            CloseAllForms();
+            ResetButtonColors();
+            btnProfile.FillColor = Color.CadetBlue;
+
+            frmProfile frmProfile = new frmProfile(frmLogin.Username);
+            frmProfile.MdiParent = this;
+            frmProfile.Show();
+            frmProfile.Dock = DockStyle.Fill;
+        }
     }
 }

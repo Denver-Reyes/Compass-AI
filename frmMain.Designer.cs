@@ -53,7 +53,7 @@
             btnMainLogout = new Guna.UI2.WinForms.Guna2Button();
             btnReports = new Guna.UI2.WinForms.Guna2Button();
             btnCreateEval = new Guna.UI2.WinForms.Guna2Button();
-            btnWIP = new Guna.UI2.WinForms.Guna2Button();
+            btnProfile = new Guna.UI2.WinForms.Guna2Button();
             btnLeaderboard = new Guna.UI2.WinForms.Guna2Button();
             btnEvaluation = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
@@ -77,7 +77,7 @@
             guna2GradientPanel1.Controls.Add(btnMainLogout);
             guna2GradientPanel1.Controls.Add(btnReports);
             guna2GradientPanel1.Controls.Add(btnCreateEval);
-            guna2GradientPanel1.Controls.Add(btnWIP);
+            guna2GradientPanel1.Controls.Add(btnProfile);
             guna2GradientPanel1.Controls.Add(btnLeaderboard);
             guna2GradientPanel1.Controls.Add(btnEvaluation);
             guna2GradientPanel1.Controls.Add(pictureBox1);
@@ -171,23 +171,25 @@
             btnCreateEval.Text = "Create Evaluation";
             btnCreateEval.Click += btnCreateEval_Click;
             // 
-            // btnWIP
+            // btnProfile
             // 
-            btnWIP.CustomizableEdges = customizableEdges9;
-            btnWIP.DisabledState.BorderColor = Color.DarkGray;
-            btnWIP.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnWIP.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnWIP.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnWIP.FillColor = Color.CadetBlue;
-            btnWIP.Font = new Font("Segoe UI", 9F);
-            btnWIP.ForeColor = Color.White;
-            btnWIP.HoverState.FillColor = Color.CadetBlue;
-            btnWIP.Location = new Point(543, 79);
-            btnWIP.Name = "btnWIP";
-            btnWIP.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnWIP.Size = new Size(180, 45);
-            btnWIP.TabIndex = 3;
-            btnWIP.Text = "WIP";
+            btnProfile.BackColor = Color.Transparent;
+            btnProfile.CustomizableEdges = customizableEdges9;
+            btnProfile.DisabledState.BorderColor = Color.DarkGray;
+            btnProfile.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnProfile.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnProfile.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnProfile.FillColor = Color.Transparent;
+            btnProfile.Font = new Font("Segoe UI", 12F);
+            btnProfile.ForeColor = Color.White;
+            btnProfile.HoverState.FillColor = Color.CadetBlue;
+            btnProfile.Location = new Point(543, 79);
+            btnProfile.Name = "btnProfile";
+            btnProfile.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnProfile.Size = new Size(180, 45);
+            btnProfile.TabIndex = 3;
+            btnProfile.Text = "Profile";
+            btnProfile.Click += btnProfile_Click;
             // 
             // btnLeaderboard
             // 
@@ -285,7 +287,7 @@
         private Guna.UI2.WinForms.Guna2Button btnMainLogout;
         private Guna.UI2.WinForms.Guna2Button btnReports;
         private Guna.UI2.WinForms.Guna2Button btnCreateEval;
-        private Guna.UI2.WinForms.Guna2Button btnWIP;
+        private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Button btnLeaderboard;
         private Guna.UI2.WinForms.Guna2Button btnEvaluation;
         private PictureBox pictureBox1;

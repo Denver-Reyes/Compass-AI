@@ -41,7 +41,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            btnReturnEvalSup = new Guna.UI2.WinForms.Guna2Button();
             lblEvalSupMenu = new Label();
             btnConfirmbutton = new Guna.UI2.WinForms.Guna2Button();
             cmbEmployeeEval = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -55,24 +54,7 @@
             // 
             // btnReturnEvalSup
             // 
-            btnReturnEvalSup.BackColor = Color.CadetBlue;
-            btnReturnEvalSup.BorderRadius = 1;
-            btnReturnEvalSup.BorderThickness = 2;
-            btnReturnEvalSup.CustomizableEdges = customizableEdges1;
-            btnReturnEvalSup.DisabledState.BorderColor = Color.DarkGray;
-            btnReturnEvalSup.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnReturnEvalSup.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnReturnEvalSup.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnReturnEvalSup.FillColor = Color.Transparent;
-            btnReturnEvalSup.Font = new Font("Segoe UI", 9F);
-            btnReturnEvalSup.ForeColor = Color.White;
-            btnReturnEvalSup.Image = (Image)resources.GetObject("btnReturnEvalSup.Image");
-            btnReturnEvalSup.ImageSize = new Size(27, 27);
-            btnReturnEvalSup.Location = new Point(645, 23);
-            btnReturnEvalSup.Name = "btnReturnEvalSup";
-            btnReturnEvalSup.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnReturnEvalSup.Size = new Size(45, 45);
-            btnReturnEvalSup.TabIndex = 4;
+
             // 
             // lblEvalSupMenu
             // 
@@ -163,20 +145,6 @@
             // 
             // cmbTaskGivenEmployee
             // 
-            guna2ComboBox3.BackColor = Color.Transparent;
-            guna2ComboBox3.CustomizableEdges = customizableEdges9;
-            guna2ComboBox3.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox3.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox3.Font = new Font("Segoe UI", 10F);
-            guna2ComboBox3.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox3.ItemHeight = 30;
-            guna2ComboBox3.Location = new Point(83, 147);
-            guna2ComboBox3.Name = "guna2ComboBox3";
-            guna2ComboBox3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2ComboBox3.Size = new Size(331, 36);
-            guna2ComboBox3.TabIndex = 12;
             // 
             // label2
             // 
