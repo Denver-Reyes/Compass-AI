@@ -119,9 +119,73 @@ namespace Compass_AI
 
         private void btnConfirmEdits_Click(object sender, EventArgs e)
         {
-            //popup message to type the current password to confirm the changes
-            //popup message if password is incorrect or if the transaction is successful
-            //save the changes to the database
+            //pnlConfirmationEdits.Visible = true and set location to 419, 195
+            pnlConfirmationEdits.Visible = true;
+            pnlConfirmationEdits.Location = new System.Drawing.Point(419, 195);
+        }
+
+        private void btnConfirmationNo_Click(object sender, EventArgs e)
+        {
+            pnlConfirmationEdits.Visible = false;
+            pnlConfirmationEdits.Location = new System.Drawing.Point(24, 378);
+        }
+
+        private void btnConfirmationYes_Click(object sender, EventArgs e)
+        {
+            //compare txtbxRetypeNewPassConfirmation value with txtbxPassword value
+            //compare txtbxTypeOldPassConfirmation to old password from database
+            //if both are correct update the database with the new values
+            //pop up confirmation message box that the data has been updated
+            //set pnlConfirmationEdits.Visible = false; if the data is saved in the database
+            //set pnlConfirmationEdits.Location = new System.Drawing.Point(24, 378); if the data is saved in the database
+            //else show error message
+
+            string oldPasswordFromDb = string.Empty;
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT password FROM tblusers WHERE username = @username";
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+                        oldPasswordFromDb = command.ExecuteScalar()?.ToString(); // Get the old password
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error retrieving old password: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Exit if there's an error
+                }
+            }
+
+            // Compare the new password and confirmation password
+            if (txtbxPassword.Text != txtbxRetypeNewPassConfirmation.Text)
+            {
+                MessageBox.Show("The new password and confirmation password do not match.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit if passwords do not match
+            }
+            else
+            {
+                MessageBox.Show("The new password and confirmation password match.", "Password Match", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            // Compare the old password
+            if (txtbxTypeOldPassConfirmation.Text != oldPasswordFromDb)
+            {
+                MessageBox.Show("The old password is incorrect.", "Old Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Exit if the old password does not match
+            }
+            else
+            {
+                MessageBox.Show("The old password is correct.", "Old Password Match", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            // If both comparisons are correct, you can proceed to update the database
+            // (This part will be implemented in the next steps)
         }
     }
 }
