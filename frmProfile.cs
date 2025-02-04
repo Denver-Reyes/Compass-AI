@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography; // Import for SHA256
+using System.Text;
 
 namespace Compass_AI
 {
@@ -132,60 +134,139 @@ namespace Compass_AI
 
         private void btnConfirmationYes_Click(object sender, EventArgs e)
         {
-            //compare txtbxRetypeNewPassConfirmation value with txtbxPassword value
-            //compare txtbxTypeOldPassConfirmation to old password from database
-            //if both are correct update the database with the new values
-            //pop up confirmation message box that the data has been updated
-            //set pnlConfirmationEdits.Visible = false; if the data is saved in the database
-            //set pnlConfirmationEdits.Location = new System.Drawing.Point(24, 378); if the data is saved in the database
-            //else show error message
-
-            string oldPasswordFromDb = string.Empty;
+            bool isUpdated = false; // Track if an update occurs
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
+
+                    // Retrieve current password hash from the database
+                    string oldPasswordHash = string.Empty;
                     string query = "SELECT password FROM tblusers WHERE username = @username";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@username", username);
-                        oldPasswordFromDb = command.ExecuteScalar()?.ToString(); // Get the old password
+                        oldPasswordHash = command.ExecuteScalar()?.ToString();
+                    }
+
+                    // Prepare the update query dynamically
+                    List<string> updateFields = new List<string>();
+                    MySqlCommand updateCommand = new MySqlCommand();
+                    updateCommand.Connection = connection;
+
+                    if (!string.IsNullOrWhiteSpace(txtbxDisplayName.Text))
+                    {
+                        updateFields.Add("displayname = @displayname");
+                        updateCommand.Parameters.AddWithValue("@displayname", txtbxDisplayName.Text);
+                        isUpdated = true;
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(txtbxUsername.Text))
+                    {
+                        updateFields.Add("username = @newUsername");
+                        updateCommand.Parameters.AddWithValue("@newUsername", txtbxUsername.Text);
+                        isUpdated = true;
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(txtbxPassword.Text))
+                    {
+                        // Validate password fields
+                        if (string.IsNullOrWhiteSpace(txtbxRetypeNewPassConfirmation.Text) || string.IsNullOrWhiteSpace(txtbxTypeOldPassConfirmation.Text))
+                        {
+                            MessageBox.Show("Please enter both old and new passwords.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        // Check if new passwords match
+                        if (txtbxPassword.Text != txtbxRetypeNewPassConfirmation.Text)
+                        {
+                            MessageBox.Show("New password and confirmation do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        // Hash old password input and compare it with stored hash
+                        string enteredOldPasswordHash = HashPassword(txtbxTypeOldPassConfirmation.Text);
+                        if (enteredOldPasswordHash != oldPasswordHash)
+                        {
+                            MessageBox.Show("Incorrect old password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        // Hash new password before storing it
+                        string newPasswordHash = HashPassword(txtbxPassword.Text);
+                        updateFields.Add("password = @password");
+                        updateCommand.Parameters.AddWithValue("@password", newPasswordHash);
+                        isUpdated = true;
+                    }
+
+                    if (!isUpdated)
+                    {
+                        MessageBox.Show("No changes detected. Please modify at least one field.", "No Changes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    // Execute the update query
+                    string updateQuery = $"UPDATE tblusers SET {string.Join(", ", updateFields)} WHERE username = @username";
+                    updateCommand.CommandText = updateQuery;
+                    updateCommand.Parameters.AddWithValue("@username", username);
+
+                    int rowsAffected = updateCommand.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Refresh profile data
+                        displayProfile();
+
+                        // Reset confirmation panel
+                        pnlConfirmationEdits.Visible = false;
+                        pnlConfirmationEdits.Location = new System.Drawing.Point(24, 378);
+
+                        //Cancel the edit return back to the original state
+                        lblUsernameHolder.Visible = true;
+                        lblDisplayNameHolder.Visible = true;
+                        lblPasswordHolder.Visible = true;
+                        txtbxDisplayName.Visible = false;
+                        txtbxUsername.Visible = false;
+                        txtbxPassword.Visible = false;
+                        btnEditProfile.Visible = true;
+                        btnCancelEdits.Visible = false;
+                        btnConfirmEdits.Location = new System.Drawing.Point(95, 283);
+                        btnConfirmEdits.Visible = false;
+                        lblDisplayName.Text = "Display Name: ";
+                        lblUsername.Text = "Username: ";
+                        lblPassword.Text = "Password: ";
+                    }
+                    else
+                    {
+                        MessageBox.Show("No updates made to the database.", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error retrieving old password: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Exit if there's an error
+                    MessageBox.Show($"Error updating profile: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
 
-            // Compare the new password and confirmation password
-            if (txtbxPassword.Text != txtbxRetypeNewPassConfirmation.Text)
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
             {
-                MessageBox.Show("The new password and confirmation password do not match.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Exit if passwords do not match
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+                byte[] hashBytes = sha256.ComputeHash(bytes);
+                return BitConverter.ToString(hashBytes).Replace("-", "").ToLower(); // Convert to lowercase hex
             }
-            else
-            {
-                MessageBox.Show("The new password and confirmation password match.", "Password Match", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+        }
 
-            // Compare the old password
-            if (txtbxTypeOldPassConfirmation.Text != oldPasswordFromDb)
-            {
-                MessageBox.Show("The old password is incorrect.", "Old Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Exit if the old password does not match
-            }
-            else
-            {
-                MessageBox.Show("The old password is correct.", "Old Password Match", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
 
-            // If both comparisons are correct, you can proceed to update the database
-            // (This part will be implemented in the next steps)
+        private void frmProfile_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

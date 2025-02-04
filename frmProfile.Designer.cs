@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblProfile = new Label();
             lblUsername = new Label();
             lblPassword = new Label();
@@ -131,7 +131,7 @@
             // 
             // btnEditProfile
             // 
-            btnEditProfile.CustomizableEdges = customizableEdges1;
+            btnEditProfile.CustomizableEdges = customizableEdges25;
             btnEditProfile.DisabledState.BorderColor = Color.DarkGray;
             btnEditProfile.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEditProfile.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -141,7 +141,7 @@
             btnEditProfile.ForeColor = Color.Black;
             btnEditProfile.Location = new Point(351, 283);
             btnEditProfile.Name = "btnEditProfile";
-            btnEditProfile.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnEditProfile.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnEditProfile.Size = new Size(122, 32);
             btnEditProfile.TabIndex = 8;
             btnEditProfile.Text = "Edit";
@@ -162,16 +162,16 @@
             pnlProfileEdit.Controls.Add(lblUsernameHolder);
             pnlProfileEdit.Controls.Add(lblUsername);
             pnlProfileEdit.Controls.Add(lblPasswordHolder);
-            pnlProfileEdit.CustomizableEdges = customizableEdges13;
+            pnlProfileEdit.CustomizableEdges = customizableEdges37;
             pnlProfileEdit.Location = new Point(337, 139);
             pnlProfileEdit.Name = "pnlProfileEdit";
-            pnlProfileEdit.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            pnlProfileEdit.ShadowDecoration.CustomizableEdges = customizableEdges38;
             pnlProfileEdit.Size = new Size(490, 336);
             pnlProfileEdit.TabIndex = 9;
             // 
             // btnConfirmEdits
             // 
-            btnConfirmEdits.CustomizableEdges = customizableEdges3;
+            btnConfirmEdits.CustomizableEdges = customizableEdges27;
             btnConfirmEdits.DisabledState.BorderColor = Color.DarkGray;
             btnConfirmEdits.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConfirmEdits.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -181,7 +181,7 @@
             btnConfirmEdits.ForeColor = Color.Black;
             btnConfirmEdits.Location = new Point(95, 283);
             btnConfirmEdits.Name = "btnConfirmEdits";
-            btnConfirmEdits.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnConfirmEdits.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnConfirmEdits.Size = new Size(122, 32);
             btnConfirmEdits.TabIndex = 15;
             btnConfirmEdits.Text = "Confirm";
@@ -190,7 +190,7 @@
             // 
             // btnCancelEdits
             // 
-            btnCancelEdits.CustomizableEdges = customizableEdges5;
+            btnCancelEdits.CustomizableEdges = customizableEdges29;
             btnCancelEdits.DisabledState.BorderColor = Color.DarkGray;
             btnCancelEdits.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancelEdits.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -200,7 +200,7 @@
             btnCancelEdits.ForeColor = Color.Black;
             btnCancelEdits.Location = new Point(223, 283);
             btnCancelEdits.Name = "btnCancelEdits";
-            btnCancelEdits.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnCancelEdits.ShadowDecoration.CustomizableEdges = customizableEdges30;
             btnCancelEdits.Size = new Size(122, 32);
             btnCancelEdits.TabIndex = 14;
             btnCancelEdits.Text = "Cancel";
@@ -209,7 +209,7 @@
             // 
             // txtbxPassword
             // 
-            txtbxPassword.CustomizableEdges = customizableEdges7;
+            txtbxPassword.CustomizableEdges = customizableEdges31;
             txtbxPassword.DefaultText = "";
             txtbxPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtbxPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -222,16 +222,16 @@
             txtbxPassword.Location = new Point(27, 205);
             txtbxPassword.Name = "txtbxPassword";
             txtbxPassword.PasswordChar = '\0';
-            txtbxPassword.PlaceholderText = "";
+            txtbxPassword.PlaceholderText = "*";
             txtbxPassword.SelectedText = "";
-            txtbxPassword.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtbxPassword.ShadowDecoration.CustomizableEdges = customizableEdges32;
             txtbxPassword.Size = new Size(414, 36);
             txtbxPassword.TabIndex = 13;
             txtbxPassword.Visible = false;
             // 
             // txtbxUsername
             // 
-            txtbxUsername.CustomizableEdges = customizableEdges9;
+            txtbxUsername.CustomizableEdges = customizableEdges33;
             txtbxUsername.DefaultText = "";
             txtbxUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtbxUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -246,14 +246,14 @@
             txtbxUsername.PasswordChar = '\0';
             txtbxUsername.PlaceholderText = "";
             txtbxUsername.SelectedText = "";
-            txtbxUsername.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtbxUsername.ShadowDecoration.CustomizableEdges = customizableEdges34;
             txtbxUsername.Size = new Size(414, 36);
             txtbxUsername.TabIndex = 12;
             txtbxUsername.Visible = false;
             // 
             // txtbxDisplayName
             // 
-            txtbxDisplayName.CustomizableEdges = customizableEdges11;
+            txtbxDisplayName.CustomizableEdges = customizableEdges35;
             txtbxDisplayName.DefaultText = "";
             txtbxDisplayName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtbxDisplayName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -268,7 +268,7 @@
             txtbxDisplayName.PasswordChar = '\0';
             txtbxDisplayName.PlaceholderText = "";
             txtbxDisplayName.SelectedText = "";
-            txtbxDisplayName.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtbxDisplayName.ShadowDecoration.CustomizableEdges = customizableEdges36;
             txtbxDisplayName.Size = new Size(414, 36);
             txtbxDisplayName.TabIndex = 11;
             txtbxDisplayName.Visible = false;
@@ -306,17 +306,17 @@
             pnlConfirmationEdits.Controls.Add(txtbxRetypeNewPassConfirmation);
             pnlConfirmationEdits.Controls.Add(lblRetypeNewpassConfirmation);
             pnlConfirmationEdits.Controls.Add(lblChangesConfirmation);
-            pnlConfirmationEdits.CustomizableEdges = customizableEdges23;
+            pnlConfirmationEdits.CustomizableEdges = customizableEdges47;
             pnlConfirmationEdits.Location = new Point(24, 378);
             pnlConfirmationEdits.Name = "pnlConfirmationEdits";
-            pnlConfirmationEdits.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            pnlConfirmationEdits.ShadowDecoration.CustomizableEdges = customizableEdges48;
             pnlConfirmationEdits.Size = new Size(298, 257);
             pnlConfirmationEdits.TabIndex = 10;
             pnlConfirmationEdits.Visible = false;
             // 
             // btnConfirmationNo
             // 
-            btnConfirmationNo.CustomizableEdges = customizableEdges15;
+            btnConfirmationNo.CustomizableEdges = customizableEdges39;
             btnConfirmationNo.DisabledState.BorderColor = Color.DarkGray;
             btnConfirmationNo.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConfirmationNo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -326,7 +326,7 @@
             btnConfirmationNo.ForeColor = Color.Black;
             btnConfirmationNo.Location = new Point(19, 208);
             btnConfirmationNo.Name = "btnConfirmationNo";
-            btnConfirmationNo.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnConfirmationNo.ShadowDecoration.CustomizableEdges = customizableEdges40;
             btnConfirmationNo.Size = new Size(122, 32);
             btnConfirmationNo.TabIndex = 16;
             btnConfirmationNo.Text = "Cancel";
@@ -334,7 +334,7 @@
             // 
             // btnConfirmationYes
             // 
-            btnConfirmationYes.CustomizableEdges = customizableEdges17;
+            btnConfirmationYes.CustomizableEdges = customizableEdges41;
             btnConfirmationYes.DisabledState.BorderColor = Color.DarkGray;
             btnConfirmationYes.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConfirmationYes.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -344,7 +344,7 @@
             btnConfirmationYes.ForeColor = Color.Black;
             btnConfirmationYes.Location = new Point(160, 208);
             btnConfirmationYes.Name = "btnConfirmationYes";
-            btnConfirmationYes.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnConfirmationYes.ShadowDecoration.CustomizableEdges = customizableEdges42;
             btnConfirmationYes.Size = new Size(122, 32);
             btnConfirmationYes.TabIndex = 16;
             btnConfirmationYes.Text = "Confirm";
@@ -352,7 +352,7 @@
             // 
             // txtbxTypeOldPassConfirmation
             // 
-            txtbxTypeOldPassConfirmation.CustomizableEdges = customizableEdges19;
+            txtbxTypeOldPassConfirmation.CustomizableEdges = customizableEdges43;
             txtbxTypeOldPassConfirmation.DefaultText = "";
             txtbxTypeOldPassConfirmation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtbxTypeOldPassConfirmation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -365,9 +365,9 @@
             txtbxTypeOldPassConfirmation.Location = new Point(19, 146);
             txtbxTypeOldPassConfirmation.Name = "txtbxTypeOldPassConfirmation";
             txtbxTypeOldPassConfirmation.PasswordChar = '*';
-            txtbxTypeOldPassConfirmation.PlaceholderText = "";
+            txtbxTypeOldPassConfirmation.PlaceholderText = "*";
             txtbxTypeOldPassConfirmation.SelectedText = "";
-            txtbxTypeOldPassConfirmation.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtbxTypeOldPassConfirmation.ShadowDecoration.CustomizableEdges = customizableEdges44;
             txtbxTypeOldPassConfirmation.Size = new Size(263, 36);
             txtbxTypeOldPassConfirmation.TabIndex = 17;
             // 
@@ -382,7 +382,7 @@
             // 
             // txtbxRetypeNewPassConfirmation
             // 
-            txtbxRetypeNewPassConfirmation.CustomizableEdges = customizableEdges21;
+            txtbxRetypeNewPassConfirmation.CustomizableEdges = customizableEdges45;
             txtbxRetypeNewPassConfirmation.DefaultText = "";
             txtbxRetypeNewPassConfirmation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtbxRetypeNewPassConfirmation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -395,9 +395,9 @@
             txtbxRetypeNewPassConfirmation.Location = new Point(19, 82);
             txtbxRetypeNewPassConfirmation.Name = "txtbxRetypeNewPassConfirmation";
             txtbxRetypeNewPassConfirmation.PasswordChar = '*';
-            txtbxRetypeNewPassConfirmation.PlaceholderText = "";
+            txtbxRetypeNewPassConfirmation.PlaceholderText = "*";
             txtbxRetypeNewPassConfirmation.SelectedText = "";
-            txtbxRetypeNewPassConfirmation.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtbxRetypeNewPassConfirmation.ShadowDecoration.CustomizableEdges = customizableEdges46;
             txtbxRetypeNewPassConfirmation.Size = new Size(263, 36);
             txtbxRetypeNewPassConfirmation.TabIndex = 16;
             // 
@@ -433,6 +433,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmProfile";
             Text = "frmProfile";
+            Load += frmProfile_Load_1;
             pnlProfileEdit.ResumeLayout(false);
             pnlProfileEdit.PerformLayout();
             pnlConfirmationEdits.ResumeLayout(false);
