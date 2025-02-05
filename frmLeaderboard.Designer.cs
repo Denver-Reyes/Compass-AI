@@ -48,24 +48,24 @@
             lvlReports = new Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            lblScore = new Label();
-            lblName = new Label();
+            lblScore1 = new Label();
+            lblName1 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            label5 = new Label();
-            label6 = new Label();
+            lblScore2 = new Label();
+            lblName2 = new Label();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            label8 = new Label();
-            label9 = new Label();
-            guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
+            lblScore3 = new Label();
+            lblName3 = new Label();
+            lblpanelclone = new Guna.UI2.WinForms.Guna2Panel();
+            lblrankno = new Label();
+            lblscoreclone = new Label();
+            lblnameclone = new Label();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
@@ -73,7 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
-            guna2Panel5.SuspendLayout();
+            lblpanelclone.SuspendLayout();
             SuspendLayout();
             // 
             // lvlReports
@@ -86,7 +86,6 @@
             lvlReports.Size = new Size(377, 71);
             lvlReports.TabIndex = 1;
             lvlReports.Text = "Leaderboard";
-            lvlReports.Click += lvlReports_Click;
             // 
             // guna2Panel1
             // 
@@ -94,8 +93,8 @@
             guna2Panel1.BorderRadius = 5;
             guna2Panel1.BorderThickness = 2;
             guna2Panel1.Controls.Add(guna2PictureBox1);
-            guna2Panel1.Controls.Add(lblScore);
-            guna2Panel1.Controls.Add(lblName);
+            guna2Panel1.Controls.Add(lblScore1);
+            guna2Panel1.Controls.Add(lblName1);
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Location = new Point(74, 154);
             guna2Panel1.Name = "guna2Panel1";
@@ -118,28 +117,27 @@
             guna2PictureBox1.TabIndex = 5;
             guna2PictureBox1.TabStop = false;
             // 
-            // lblScore
+            // lblScore1
             // 
-            lblScore.AutoSize = true;
-            lblScore.Font = new Font("Segoe UI", 20F);
-            lblScore.ForeColor = Color.FromArgb(40, 90, 114);
-            lblScore.Location = new Point(852, 14);
-            lblScore.Name = "lblScore";
-            lblScore.Size = new Size(82, 37);
-            lblScore.TabIndex = 4;
-            lblScore.Text = "Score";
+            lblScore1.AutoSize = true;
+            lblScore1.Font = new Font("Segoe UI", 20F);
+            lblScore1.ForeColor = Color.FromArgb(40, 90, 114);
+            lblScore1.Location = new Point(852, 14);
+            lblScore1.Name = "lblScore1";
+            lblScore1.Size = new Size(82, 37);
+            lblScore1.TabIndex = 4;
+            lblScore1.Text = "Score";
             // 
-            // lblName
+            // lblName1
             // 
-            lblName.AutoSize = true;
-            lblName.Font = new Font("Segoe UI", 20F);
-            lblName.ForeColor = Color.FromArgb(40, 90, 114);
-            lblName.Location = new Point(115, 14);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(88, 37);
-            lblName.TabIndex = 3;
-            lblName.Text = "Name";
-            lblName.Click += lblName_Click;
+            lblName1.AutoSize = true;
+            lblName1.Font = new Font("Segoe UI", 20F);
+            lblName1.ForeColor = Color.FromArgb(40, 90, 114);
+            lblName1.Location = new Point(115, 14);
+            lblName1.Name = "lblName1";
+            lblName1.Size = new Size(88, 37);
+            lblName1.TabIndex = 3;
+            lblName1.Text = "Name";
             // 
             // guna2Panel2
             // 
@@ -193,8 +191,8 @@
             guna2Panel3.BorderRadius = 5;
             guna2Panel3.BorderThickness = 2;
             guna2Panel3.Controls.Add(guna2PictureBox2);
-            guna2Panel3.Controls.Add(label5);
-            guna2Panel3.Controls.Add(label6);
+            guna2Panel3.Controls.Add(lblScore2);
+            guna2Panel3.Controls.Add(lblName2);
             guna2Panel3.CustomizableEdges = customizableEdges9;
             guna2Panel3.Location = new Point(74, 226);
             guna2Panel3.Name = "guna2Panel3";
@@ -217,27 +215,27 @@
             guna2PictureBox2.TabIndex = 6;
             guna2PictureBox2.TabStop = false;
             // 
-            // label5
+            // lblScore2
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 20F);
-            label5.ForeColor = Color.FromArgb(40, 90, 114);
-            label5.Location = new Point(852, 14);
-            label5.Name = "label5";
-            label5.Size = new Size(82, 37);
-            label5.TabIndex = 4;
-            label5.Text = "Score";
+            lblScore2.AutoSize = true;
+            lblScore2.Font = new Font("Segoe UI", 20F);
+            lblScore2.ForeColor = Color.FromArgb(40, 90, 114);
+            lblScore2.Location = new Point(852, 14);
+            lblScore2.Name = "lblScore2";
+            lblScore2.Size = new Size(82, 37);
+            lblScore2.TabIndex = 4;
+            lblScore2.Text = "Score";
             // 
-            // label6
+            // lblName2
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 20F);
-            label6.ForeColor = Color.FromArgb(40, 90, 114);
-            label6.Location = new Point(115, 14);
-            label6.Name = "label6";
-            label6.Size = new Size(88, 37);
-            label6.TabIndex = 3;
-            label6.Text = "Name";
+            lblName2.AutoSize = true;
+            lblName2.Font = new Font("Segoe UI", 20F);
+            lblName2.ForeColor = Color.FromArgb(40, 90, 114);
+            lblName2.Location = new Point(115, 14);
+            lblName2.Name = "lblName2";
+            lblName2.Size = new Size(88, 37);
+            lblName2.TabIndex = 3;
+            lblName2.Text = "Name";
             // 
             // guna2Panel4
             // 
@@ -245,8 +243,8 @@
             guna2Panel4.BorderRadius = 5;
             guna2Panel4.BorderThickness = 2;
             guna2Panel4.Controls.Add(guna2PictureBox3);
-            guna2Panel4.Controls.Add(label8);
-            guna2Panel4.Controls.Add(label9);
+            guna2Panel4.Controls.Add(lblScore3);
+            guna2Panel4.Controls.Add(lblName3);
             guna2Panel4.CustomizableEdges = customizableEdges13;
             guna2Panel4.Location = new Point(74, 298);
             guna2Panel4.Name = "guna2Panel4";
@@ -269,75 +267,76 @@
             guna2PictureBox3.TabIndex = 7;
             guna2PictureBox3.TabStop = false;
             // 
-            // label8
+            // lblScore3
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 20F);
-            label8.ForeColor = Color.FromArgb(40, 90, 114);
-            label8.Location = new Point(852, 14);
-            label8.Name = "label8";
-            label8.Size = new Size(82, 37);
-            label8.TabIndex = 4;
-            label8.Text = "Score";
+            lblScore3.AutoSize = true;
+            lblScore3.Font = new Font("Segoe UI", 20F);
+            lblScore3.ForeColor = Color.FromArgb(40, 90, 114);
+            lblScore3.Location = new Point(852, 14);
+            lblScore3.Name = "lblScore3";
+            lblScore3.Size = new Size(82, 37);
+            lblScore3.TabIndex = 4;
+            lblScore3.Text = "Score";
             // 
-            // label9
+            // lblName3
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 20F);
-            label9.ForeColor = Color.FromArgb(40, 90, 114);
-            label9.Location = new Point(115, 14);
-            label9.Name = "label9";
-            label9.Size = new Size(88, 37);
-            label9.TabIndex = 3;
-            label9.Text = "Name";
+            lblName3.AutoSize = true;
+            lblName3.Font = new Font("Segoe UI", 20F);
+            lblName3.ForeColor = Color.FromArgb(40, 90, 114);
+            lblName3.Location = new Point(115, 14);
+            lblName3.Name = "lblName3";
+            lblName3.Size = new Size(88, 37);
+            lblName3.TabIndex = 3;
+            lblName3.Text = "Name";
             // 
-            // guna2Panel5
+            // lblpanelclone
             // 
-            guna2Panel5.BorderColor = Color.CadetBlue;
-            guna2Panel5.BorderRadius = 5;
-            guna2Panel5.BorderThickness = 2;
-            guna2Panel5.Controls.Add(label10);
-            guna2Panel5.Controls.Add(label11);
-            guna2Panel5.Controls.Add(label12);
-            guna2Panel5.CustomizableEdges = customizableEdges15;
-            guna2Panel5.Location = new Point(74, 370);
-            guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel5.Size = new Size(979, 66);
-            guna2Panel5.TabIndex = 8;
+            lblpanelclone.BorderColor = Color.CadetBlue;
+            lblpanelclone.BorderRadius = 5;
+            lblpanelclone.BorderThickness = 2;
+            lblpanelclone.Controls.Add(lblrankno);
+            lblpanelclone.Controls.Add(lblscoreclone);
+            lblpanelclone.Controls.Add(lblnameclone);
+            lblpanelclone.CustomizableEdges = customizableEdges15;
+            lblpanelclone.Location = new Point(74, 370);
+            lblpanelclone.Name = "lblpanelclone";
+            lblpanelclone.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            lblpanelclone.Size = new Size(979, 66);
+            lblpanelclone.TabIndex = 8;
+            lblpanelclone.Visible = false;
             // 
-            // label10
+            // lblrankno
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 20F);
-            label10.ForeColor = Color.FromArgb(40, 90, 114);
-            label10.Location = new Point(21, 14);
-            label10.Name = "label10";
-            label10.Size = new Size(75, 37);
-            label10.TabIndex = 5;
-            label10.Text = "Rank";
+            lblrankno.AutoSize = true;
+            lblrankno.Font = new Font("Segoe UI", 20F);
+            lblrankno.ForeColor = Color.FromArgb(40, 90, 114);
+            lblrankno.Location = new Point(21, 14);
+            lblrankno.Name = "lblrankno";
+            lblrankno.Size = new Size(75, 37);
+            lblrankno.TabIndex = 5;
+            lblrankno.Text = "Rank";
             // 
-            // label11
+            // lblscoreclone
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 20F);
-            label11.ForeColor = Color.FromArgb(40, 90, 114);
-            label11.Location = new Point(852, 14);
-            label11.Name = "label11";
-            label11.Size = new Size(82, 37);
-            label11.TabIndex = 4;
-            label11.Text = "Score";
+            lblscoreclone.AutoSize = true;
+            lblscoreclone.Font = new Font("Segoe UI", 20F);
+            lblscoreclone.ForeColor = Color.FromArgb(40, 90, 114);
+            lblscoreclone.Location = new Point(852, 14);
+            lblscoreclone.Name = "lblscoreclone";
+            lblscoreclone.Size = new Size(82, 37);
+            lblscoreclone.TabIndex = 4;
+            lblscoreclone.Text = "Score";
             // 
-            // label12
+            // lblnameclone
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 20F);
-            label12.ForeColor = Color.FromArgb(40, 90, 114);
-            label12.Location = new Point(115, 14);
-            label12.Name = "label12";
-            label12.Size = new Size(88, 37);
-            label12.TabIndex = 3;
-            label12.Text = "Name";
+            lblnameclone.AutoSize = true;
+            lblnameclone.Font = new Font("Segoe UI", 20F);
+            lblnameclone.ForeColor = Color.FromArgb(40, 90, 114);
+            lblnameclone.Location = new Point(115, 14);
+            lblnameclone.Name = "lblnameclone";
+            lblnameclone.Size = new Size(88, 37);
+            lblnameclone.TabIndex = 3;
+            lblnameclone.Text = "Name";
             // 
             // frmLeaderboard
             // 
@@ -346,7 +345,7 @@
             AutoScroll = true;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1144, 684);
-            Controls.Add(guna2Panel5);
+            Controls.Add(lblpanelclone);
             Controls.Add(guna2Panel4);
             Controls.Add(guna2Panel3);
             Controls.Add(guna2Panel2);
@@ -357,6 +356,7 @@
             MaximizeBox = false;
             Name = "frmLeaderboard";
             Text = "Leaderboard";
+            Load += frmLeaderboard_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
@@ -368,8 +368,8 @@
             guna2Panel4.ResumeLayout(false);
             guna2Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
-            guna2Panel5.ResumeLayout(false);
-            guna2Panel5.PerformLayout();
+            lblpanelclone.ResumeLayout(false);
+            lblpanelclone.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -378,24 +378,24 @@
 
         private Label lvlReports;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Label lblScore;
-        private Label lblName;
+        private Label lblScore1;
+        private Label lblName1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Label label3;
         private Label label2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Label label5;
-        private Label label6;
+        private Label lblScore2;
+        private Label lblName2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Label label8;
-        private Label label9;
+        private Label lblScore3;
+        private Label lblName3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Label label10;
-        private Label label11;
-        private Label label12;
+        private Guna.UI2.WinForms.Guna2Panel lblpanelclone;
+        private Label lblrankno;
+        private Label lblscoreclone;
+        private Label lblnameclone;
     }
 }
