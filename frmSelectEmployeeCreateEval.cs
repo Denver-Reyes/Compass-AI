@@ -16,5 +16,13 @@ namespace Compass_AI
         {
             InitializeComponent();
         }
+
+        private void btnConfirmSelectedEmp_Click(object sender, EventArgs e)
+        {
+            frmCreateEval frmCreateEval = new frmCreateEval();
+            frmCreateEval.MdiParent = this.MdiParent;
+            frmCreateEval.Show();
+            frmCreateEval.Dock = DockStyle.Fill;
+        }
     }
 }

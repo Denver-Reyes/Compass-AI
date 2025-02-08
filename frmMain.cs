@@ -119,6 +119,7 @@ namespace Compass_AI
             btnLeaderboard.FillColor = Color.Transparent;
             btnCreateEval.FillColor = Color.Transparent;
             btnReports.FillColor = Color.Transparent;
+            btnProfile.FillColor = Color.Transparent;
         }
 
         // Button click handlers for opening child forms
@@ -160,10 +161,10 @@ namespace Compass_AI
             ResetButtonColors();
             btnCreateEval.FillColor = Color.CadetBlue;
 
-            frmCreateEval frmCreateEval = new frmCreateEval();
-            frmCreateEval.MdiParent = this;
-            frmCreateEval.Show();
-            frmCreateEval.Dock = DockStyle.Fill;
+            frmSelectEmployeeCreateEval frmSelectEmployeeCreateEval = new frmSelectEmployeeCreateEval();
+            frmSelectEmployeeCreateEval.MdiParent = this;
+            frmSelectEmployeeCreateEval.Show();
+            frmSelectEmployeeCreateEval.Dock = DockStyle.Fill;
         }
 
         private void btnReports_Click(object sender, EventArgs e)
