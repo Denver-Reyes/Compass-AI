@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,8 +46,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            btnEmployeEvalName = new Guna.UI2.WinForms.Guna2Button();
             txtQuestion = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             btnEvalRefresh = new Guna.UI2.WinForms.Guna2Button();
@@ -57,41 +55,14 @@
             btnQuestionSubmit = new Guna.UI2.WinForms.Guna2Button();
             lblTaskName = new Label();
             txtQuestionSet = new Guna.UI2.WinForms.Guna2TextBox();
+            btnEmployeEvalName = new Guna.UI2.WinForms.Guna2Button();
+            guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2GradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
-            // guna2GradientPanel1
-            // 
-            guna2GradientPanel1.Controls.Add(btnEmployeEvalName);
-            guna2GradientPanel1.CustomizableEdges = customizableEdges3;
-            guna2GradientPanel1.Location = new Point(23, 30);
-            guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GradientPanel1.Size = new Size(200, 667);
-            guna2GradientPanel1.TabIndex = 3;
-            // 
-            // btnEmployeEvalName
-            // 
-            btnEmployeEvalName.CustomizableEdges = customizableEdges1;
-            btnEmployeEvalName.DisabledState.BorderColor = Color.DarkGray;
-            btnEmployeEvalName.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEmployeEvalName.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEmployeEvalName.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEmployeEvalName.Dock = DockStyle.Top;
-            btnEmployeEvalName.FillColor = Color.CadetBlue;
-            btnEmployeEvalName.Font = new Font("Segoe UI", 9F);
-            btnEmployeEvalName.ForeColor = Color.White;
-            btnEmployeEvalName.Location = new Point(0, 0);
-            btnEmployeEvalName.Name = "btnEmployeEvalName";
-            btnEmployeEvalName.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnEmployeEvalName.Size = new Size(200, 45);
-            btnEmployeEvalName.TabIndex = 4;
-            btnEmployeEvalName.Text = "Employee Name";
-            btnEmployeEvalName.Click += btnEmployeEvalName_Click;
-            // 
             // txtQuestion
             // 
-            txtQuestion.CustomizableEdges = customizableEdges5;
+            txtQuestion.CustomizableEdges = customizableEdges1;
             txtQuestion.DefaultText = "";
             txtQuestion.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtQuestion.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -106,7 +77,7 @@
             txtQuestion.PasswordChar = '\0';
             txtQuestion.PlaceholderText = "";
             txtQuestion.SelectedText = "";
-            txtQuestion.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtQuestion.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtQuestion.Size = new Size(816, 36);
             txtQuestion.TabIndex = 4;
             // 
@@ -124,7 +95,7 @@
             // 
             // btnEvalRefresh
             // 
-            btnEvalRefresh.CustomizableEdges = customizableEdges7;
+            btnEvalRefresh.CustomizableEdges = customizableEdges3;
             btnEvalRefresh.DisabledState.BorderColor = Color.DarkGray;
             btnEvalRefresh.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEvalRefresh.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -134,7 +105,7 @@
             btnEvalRefresh.ForeColor = Color.White;
             btnEvalRefresh.Location = new Point(931, 713);
             btnEvalRefresh.Name = "btnEvalRefresh";
-            btnEvalRefresh.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnEvalRefresh.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnEvalRefresh.Size = new Size(91, 29);
             btnEvalRefresh.TabIndex = 6;
             btnEvalRefresh.Text = "Refresh";
@@ -142,16 +113,16 @@
             // guna2CustomGradientPanel1
             // 
             guna2CustomGradientPanel1.AutoScroll = true;
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges9;
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges5;
             guna2CustomGradientPanel1.Location = new Point(313, 253);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2CustomGradientPanel1.Size = new Size(816, 444);
             guna2CustomGradientPanel1.TabIndex = 7;
             // 
             // btnEvalSubmit
             // 
-            btnEvalSubmit.CustomizableEdges = customizableEdges11;
+            btnEvalSubmit.CustomizableEdges = customizableEdges7;
             btnEvalSubmit.DisabledState.BorderColor = Color.DarkGray;
             btnEvalSubmit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEvalSubmit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -161,7 +132,7 @@
             btnEvalSubmit.ForeColor = Color.White;
             btnEvalSubmit.Location = new Point(1038, 713);
             btnEvalSubmit.Name = "btnEvalSubmit";
-            btnEvalSubmit.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnEvalSubmit.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnEvalSubmit.Size = new Size(91, 29);
             btnEvalSubmit.TabIndex = 8;
             btnEvalSubmit.Text = "Submit";
@@ -169,7 +140,7 @@
             // 
             // btnEvalDelete
             // 
-            btnEvalDelete.CustomizableEdges = customizableEdges13;
+            btnEvalDelete.CustomizableEdges = customizableEdges9;
             btnEvalDelete.DisabledState.BorderColor = Color.DarkGray;
             btnEvalDelete.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEvalDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -179,14 +150,14 @@
             btnEvalDelete.ForeColor = Color.White;
             btnEvalDelete.Location = new Point(822, 713);
             btnEvalDelete.Name = "btnEvalDelete";
-            btnEvalDelete.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnEvalDelete.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnEvalDelete.Size = new Size(91, 29);
             btnEvalDelete.TabIndex = 9;
             btnEvalDelete.Text = "Delete";
             // 
             // btnQuestionSubmit
             // 
-            btnQuestionSubmit.CustomizableEdges = customizableEdges15;
+            btnQuestionSubmit.CustomizableEdges = customizableEdges11;
             btnQuestionSubmit.DisabledState.BorderColor = Color.DarkGray;
             btnQuestionSubmit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnQuestionSubmit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -196,7 +167,7 @@
             btnQuestionSubmit.ForeColor = Color.White;
             btnQuestionSubmit.Location = new Point(1038, 212);
             btnQuestionSubmit.Name = "btnQuestionSubmit";
-            btnQuestionSubmit.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnQuestionSubmit.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnQuestionSubmit.Size = new Size(91, 29);
             btnQuestionSubmit.TabIndex = 11;
             btnQuestionSubmit.Text = "Submit";
@@ -215,7 +186,7 @@
             // 
             // txtQuestionSet
             // 
-            txtQuestionSet.CustomizableEdges = customizableEdges17;
+            txtQuestionSet.CustomizableEdges = customizableEdges13;
             txtQuestionSet.DefaultText = "";
             txtQuestionSet.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtQuestionSet.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -230,9 +201,38 @@
             txtQuestionSet.PasswordChar = '\0';
             txtQuestionSet.PlaceholderText = "";
             txtQuestionSet.SelectedText = "";
-            txtQuestionSet.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtQuestionSet.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtQuestionSet.Size = new Size(816, 36);
             txtQuestionSet.TabIndex = 12;
+            // 
+            // btnEmployeEvalName
+            // 
+            btnEmployeEvalName.CustomizableEdges = customizableEdges15;
+            btnEmployeEvalName.DisabledState.BorderColor = Color.DarkGray;
+            btnEmployeEvalName.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEmployeEvalName.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEmployeEvalName.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEmployeEvalName.Dock = DockStyle.Top;
+            btnEmployeEvalName.FillColor = Color.CadetBlue;
+            btnEmployeEvalName.Font = new Font("Segoe UI", 9F);
+            btnEmployeEvalName.ForeColor = Color.White;
+            btnEmployeEvalName.Location = new Point(0, 0);
+            btnEmployeEvalName.Name = "btnEmployeEvalName";
+            btnEmployeEvalName.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEmployeEvalName.Size = new Size(200, 45);
+            btnEmployeEvalName.TabIndex = 4;
+            btnEmployeEvalName.Text = "Employee Name";
+            btnEmployeEvalName.Click += btnEmployeEvalName_Click;
+            // 
+            // guna2GradientPanel1
+            // 
+            guna2GradientPanel1.Controls.Add(btnEmployeEvalName);
+            guna2GradientPanel1.CustomizableEdges = customizableEdges17;
+            guna2GradientPanel1.Location = new Point(23, 30);
+            guna2GradientPanel1.Name = "guna2GradientPanel1";
+            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2GradientPanel1.Size = new Size(200, 667);
+            guna2GradientPanel1.TabIndex = 3;
             // 
             // frmCreateEval
             // 
@@ -261,8 +261,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2Button btnEmployeEvalName;
         private Guna.UI2.WinForms.Guna2TextBox txtQuestion;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button btnEvalRefresh;
@@ -272,5 +270,7 @@
         private Guna.UI2.WinForms.Guna2Button btnQuestionSubmit;
         private Label lblTaskName;
         private Guna.UI2.WinForms.Guna2TextBox txtQuestionSet;
+        private Guna.UI2.WinForms.Guna2Button btnEmployeEvalName;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
     }
 }

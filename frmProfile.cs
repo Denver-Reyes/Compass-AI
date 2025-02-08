@@ -73,17 +73,18 @@ namespace Compass_AI
             lblPasswordHolder.Visible = false;
 
             // Set the textboxes to visible
-            txtbxDisplayName.Visible = true;
+            txtbxDisplayFirstName.Visible = true;
+            txtbxDisplayLastName.Visible = true; 
             txtbxUsername.Visible = true;
             txtbxPassword.Visible = true; // Assuming you have a textbox for the password
 
             // Set the locations of the textboxes
-            txtbxDisplayName.Location = new System.Drawing.Point(27, 56);
+            txtbxDisplayFirstName.Location = new System.Drawing.Point(27, 56);
             txtbxUsername.Location = new System.Drawing.Point(27, 132);
             txtbxPassword.Location = new System.Drawing.Point(27, 205);
 
             // Set the text inside the textboxes to the current values of the login info
-            txtbxDisplayName.Text = lblDisplayNameHolder.Text; // Assuming lblDisplayNameHolder has the current display name
+            txtbxDisplayFirstName.Text = lblDisplayNameHolder.Text; // Assuming lblDisplayNameHolder has the current display name
             txtbxUsername.Text = lblUsernameHolder.Text; // Assuming lblUsernameHolder has the current username
 
             //set change location of btnConfirmEdit and btnCancelEdits to visible
@@ -106,7 +107,8 @@ namespace Compass_AI
             lblUsernameHolder.Visible = true;
             lblDisplayNameHolder.Visible = true;
             lblPasswordHolder.Visible = true;
-            txtbxDisplayName.Visible = false;
+            txtbxDisplayFirstName.Visible = false;
+            txtbxDisplayLastName.Visible = false;
             txtbxUsername.Visible = false;
             txtbxPassword.Visible = false;
             btnEditProfile.Visible = true;
@@ -157,10 +159,10 @@ namespace Compass_AI
                     MySqlCommand updateCommand = new MySqlCommand();
                     updateCommand.Connection = connection;
 
-                    if (!string.IsNullOrWhiteSpace(txtbxDisplayName.Text))
+                    if (!string.IsNullOrWhiteSpace(txtbxDisplayFirstName.Text))
                     {
                         updateFields.Add("displayname = @displayname");
-                        updateCommand.Parameters.AddWithValue("@displayname", txtbxDisplayName.Text);
+                        updateCommand.Parameters.AddWithValue("@displayname", txtbxDisplayFirstName.Text);
                         isUpdated = true;
                     }
 
@@ -230,7 +232,7 @@ namespace Compass_AI
                         lblUsernameHolder.Visible = true;
                         lblDisplayNameHolder.Visible = true;
                         lblPasswordHolder.Visible = true;
-                        txtbxDisplayName.Visible = false;
+                        txtbxDisplayFirstName.Visible = false;
                         txtbxUsername.Visible = false;
                         txtbxPassword.Visible = false;
                         btnEditProfile.Visible = true;
