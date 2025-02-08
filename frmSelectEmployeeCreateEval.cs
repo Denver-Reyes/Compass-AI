@@ -26,6 +26,7 @@ namespace Compass_AI
         private void LoadEmployeePanels()
         {
             pnlList.Controls.Clear(); // Clear previous dynamically generated panels
+            radioButtonStates.Clear(); // Clear previous selection states
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -42,7 +43,7 @@ namespace Compass_AI
 
                         while (reader.Read())
                         {
-                            string username = reader["username"].ToString(); // Store username
+                            string username = reader["username"].ToString();
                             string employeeName = reader["displayname"].ToString();
                             string employeePosition = reader["position"].ToString();
 
@@ -57,12 +58,12 @@ namespace Compass_AI
                             // Clone Employee Name Label
                             Label lblEmployeeNameClone = new Label
                             {
-                                Text = employeeName, // Display Name
+                                Text = employeeName,
                                 AutoSize = lblEmployeeName.AutoSize,
                                 Font = lblEmployeeName.Font,
                                 ForeColor = lblEmployeeName.ForeColor,
                                 Location = lblEmployeeName.Location,
-                                Tag = username // Store username in the Tag property
+                                Tag = username // Store username in Tag
                             };
 
                             // Clone Position Label
@@ -84,11 +85,19 @@ namespace Compass_AI
                                 Location = rbtnSelectEmp.Location
                             };
 
-                            // Store selected employee when radio button is clicked
+                            // Initialize selection state as false (not selected)
+                            radioButtonStates[rbtnSelectEmpClone] = false;
+
+                            // Toggle selection when clicked
                             rbtnSelectEmpClone.Click += (s, ev) =>
                             {
-                                // Retrieve the username from the label's Tag
-                                selectedEmployeeUsername = lblEmployeeNameClone.Tag.ToString();
+                                RadioButton clickedRadio = (RadioButton)s;
+
+                                // Toggle selection state
+                                radioButtonStates[clickedRadio] = !radioButtonStates[clickedRadio];
+
+                                // Apply new state (Checked or Unchecked)
+                                clickedRadio.Checked = radioButtonStates[clickedRadio];
                             };
 
                             // Add controls to the employee panel
@@ -106,20 +115,42 @@ namespace Compass_AI
         }
 
 
+
         private void btnConfirmSelectedEmp_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(selectedEmployeeUsername))
+            List<string> selectedEmployees = new List<string>();
+
+            // Loop through all panels in pnlList
+            foreach (Control panel in pnlList.Controls)
             {
-                MessageBox.Show("Please select an employee.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (panel is Panel employeePanel)
+                {
+                    // Find the RadioButton and Label inside the panel
+                    RadioButton radioButton = employeePanel.Controls.OfType<RadioButton>().FirstOrDefault();
+                    Label lblEmployee = employeePanel.Controls.OfType<Label>().FirstOrDefault();
+
+                    if (radioButton != null && radioButton.Checked && lblEmployee != null)
+                    {
+                        // Retrieve username from lblEmployee.Tag
+                        string username = lblEmployee.Tag.ToString();
+                        selectedEmployees.Add(username);
+                    }
+                }
+            }
+
+            if (selectedEmployees.Count == 0)
+            {
+                MessageBox.Show("Please select at least one employee.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Pass the username (stored in Tag) to frmCreateEval
-            frmCreateEval frmCreateEval = new frmCreateEval(selectedEmployeeUsername);
+            // Pass the list of selected employees to frmCreateEval
+            frmCreateEval frmCreateEval = new frmCreateEval(selectedEmployees);
             frmCreateEval.MdiParent = this.MdiParent;
             frmCreateEval.Show();
             frmCreateEval.Dock = DockStyle.Fill;
         }
+
 
 
 

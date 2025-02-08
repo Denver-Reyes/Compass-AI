@@ -16,10 +16,12 @@ namespace Compass_AI
 
         private string connectionString = "Server=compass-ai.czaseckgg0hi.ap-southeast-2.rds.amazonaws.com;Database=DBCompassAI;Uid=admin;Pwd=rErS3S2Mnr8Wus3Bkwb0;";
 
-        public frmCreateEval(string employeeUsername) // Accept username instead of displayname
+        private List<string> selectedEmployees;
+
+        public frmCreateEval(List<string> employees)
         {
             InitializeComponent();
-            selectedEmployeeUsername = employeeUsername; // Store username
+            selectedEmployees = employees;
         }
 
         private void frmCreateEval_Load(object sender, EventArgs e)
@@ -29,9 +31,10 @@ namespace Compass_AI
 
         private void btnQuestionSubmit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(selectedEmployeeUsername))
+            // Ensure at least one employee is selected
+            if (selectedEmployees == null || selectedEmployees.Count == 0)
             {
-                MessageBox.Show("Please select an employee before submitting a question.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select at least one employee before submitting a question.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -78,6 +81,7 @@ namespace Compass_AI
             txtQuestion.Clear();
         }
 
+
         private void btnEvalDelete_Click(object sender, EventArgs e)
         {
             if (selectedButton != null)
@@ -107,9 +111,9 @@ namespace Compass_AI
 
         private void btnEvalSubmit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(selectedEmployeeUsername))
+            if (selectedEmployees == null || selectedEmployees.Count == 0)
             {
-                MessageBox.Show("Please select an employee before submitting the evaluation.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No employees selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -142,17 +146,20 @@ namespace Compass_AI
 
                         foreach (string question in remainingQuestions)
                         {
-                            string query = "INSERT INTO tblquestions (questionText, questionSet, created_for, created_by, created_date) VALUES (@questionText, @questionSet, @createdFor, @createdBy, @createdDate)";
-
-                            using (MySqlCommand command = new MySqlCommand(query, connection))
+                            foreach (string employee in selectedEmployees) // Save for each selected employee
                             {
-                                command.Parameters.AddWithValue("@questionText", question);
-                                command.Parameters.AddWithValue("@questionSet", questionSet);
-                                command.Parameters.AddWithValue("@createdFor", selectedEmployeeUsername); // Now correctly storing username
-                                command.Parameters.AddWithValue("@createdBy", createdBy);
-                                command.Parameters.AddWithValue("@createdDate", DateTime.Now);
+                                string query = "INSERT INTO tblquestions (questionText, questionSet, created_for, created_by, created_date) VALUES (@questionText, @questionSet, @createdFor, @createdBy, @createdDate)";
 
-                                command.ExecuteNonQuery();
+                                using (MySqlCommand command = new MySqlCommand(query, connection))
+                                {
+                                    command.Parameters.AddWithValue("@questionText", question);
+                                    command.Parameters.AddWithValue("@questionSet", questionSet);
+                                    command.Parameters.AddWithValue("@createdFor", employee); // Store username instead of displayname
+                                    command.Parameters.AddWithValue("@createdBy", createdBy);
+                                    command.Parameters.AddWithValue("@createdDate", DateTime.Now);
+
+                                    command.ExecuteNonQuery();
+                                }
                             }
                         }
 
@@ -169,6 +176,7 @@ namespace Compass_AI
                 MessageBox.Show("No questions to submit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
     }
 }
