@@ -48,7 +48,7 @@ namespace Compass_AI
 
                                 // Update labels with fetched values
                                 lblUsernameHolder.Text = fetchedUsername;
-                                lblDisplayNameHolder.Text = fetchedDisplayName;
+                                lblDisplayFirstNameHolder.Text = fetchedDisplayName;
                                 lblPasswordHolder.Text = new string('*', fetchedPassword.Length); // Mask password with asterisks
                             }
                             else
@@ -69,12 +69,12 @@ namespace Compass_AI
         {
             // Set the lblUsernameHolder, lblDisplayNameHolder, and lblPasswordHolder to invisible
             lblUsernameHolder.Visible = false;
-            lblDisplayNameHolder.Visible = false;
+            lblDisplayFirstNameHolder.Visible = false;
             lblPasswordHolder.Visible = false;
 
             // Set the textboxes to visible
             txtbxDisplayFirstName.Visible = true;
-            txtbxDisplayLastName.Visible = true; 
+            txtbxDisplayLastName.Visible = true;
             txtbxUsername.Visible = true;
             txtbxPassword.Visible = true; // Assuming you have a textbox for the password
 
@@ -84,7 +84,7 @@ namespace Compass_AI
             txtbxPassword.Location = new System.Drawing.Point(27, 205);
 
             // Set the text inside the textboxes to the current values of the login info
-            txtbxDisplayFirstName.Text = lblDisplayNameHolder.Text; // Assuming lblDisplayNameHolder has the current display name
+            txtbxDisplayFirstName.Text = lblDisplayFirstNameHolder.Text; // Assuming lblDisplayNameHolder has the current display name
             txtbxUsername.Text = lblUsernameHolder.Text; // Assuming lblUsernameHolder has the current username
 
             //set change location of btnConfirmEdit and btnCancelEdits to visible
@@ -105,7 +105,7 @@ namespace Compass_AI
         {
             //Cancel the edit return back to the original state
             lblUsernameHolder.Visible = true;
-            lblDisplayNameHolder.Visible = true;
+            lblDisplayFirstNameHolder.Visible = true;
             lblPasswordHolder.Visible = true;
             txtbxDisplayFirstName.Visible = false;
             txtbxDisplayLastName.Visible = false;
@@ -159,10 +159,12 @@ namespace Compass_AI
                     MySqlCommand updateCommand = new MySqlCommand();
                     updateCommand.Connection = connection;
 
-                    if (!string.IsNullOrWhiteSpace(txtbxDisplayFirstName.Text))
+                    // Combine First Name and Last Name before updating displayname
+                    string fullName = $"{txtbxDisplayFirstName.Text.Trim()} {txtbxDisplayLastName.Text.Trim()}".Trim();
+                    if (!string.IsNullOrWhiteSpace(fullName))
                     {
                         updateFields.Add("displayname = @displayname");
-                        updateCommand.Parameters.AddWithValue("@displayname", txtbxDisplayFirstName.Text);
+                        updateCommand.Parameters.AddWithValue("@displayname", fullName);
                         isUpdated = true;
                     }
 
@@ -230,9 +232,10 @@ namespace Compass_AI
 
                         //Cancel the edit return back to the original state
                         lblUsernameHolder.Visible = true;
-                        lblDisplayNameHolder.Visible = true;
+                        lblDisplayFirstNameHolder.Visible = true;
                         lblPasswordHolder.Visible = true;
                         txtbxDisplayFirstName.Visible = false;
+                        txtbxDisplayLastName.Visible = false;
                         txtbxUsername.Visible = false;
                         txtbxPassword.Visible = false;
                         btnEditProfile.Visible = true;
@@ -255,6 +258,7 @@ namespace Compass_AI
             }
         }
 
+
         private string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -270,5 +274,7 @@ namespace Compass_AI
         {
 
         }
+
+        
     }
 }

@@ -42,10 +42,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtQuestion = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             btnEvalRefresh = new Guna.UI2.WinForms.Guna2Button();
@@ -55,9 +51,6 @@
             btnQuestionSubmit = new Guna.UI2.WinForms.Guna2Button();
             lblTaskName = new Label();
             txtQuestionSet = new Guna.UI2.WinForms.Guna2TextBox();
-            btnEmployeEvalName = new Guna.UI2.WinForms.Guna2Button();
-            guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            guna2GradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // txtQuestion
@@ -91,7 +84,6 @@
             label1.Size = new Size(249, 37);
             label1.TabIndex = 5;
             label1.Text = "Enter the task given";
-            label1.Click += label1_Click;
             // 
             // btnEvalRefresh
             // 
@@ -205,35 +197,6 @@
             txtQuestionSet.Size = new Size(816, 36);
             txtQuestionSet.TabIndex = 12;
             // 
-            // btnEmployeEvalName
-            // 
-            btnEmployeEvalName.CustomizableEdges = customizableEdges15;
-            btnEmployeEvalName.DisabledState.BorderColor = Color.DarkGray;
-            btnEmployeEvalName.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEmployeEvalName.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEmployeEvalName.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEmployeEvalName.Dock = DockStyle.Top;
-            btnEmployeEvalName.FillColor = Color.CadetBlue;
-            btnEmployeEvalName.Font = new Font("Segoe UI", 9F);
-            btnEmployeEvalName.ForeColor = Color.White;
-            btnEmployeEvalName.Location = new Point(0, 0);
-            btnEmployeEvalName.Name = "btnEmployeEvalName";
-            btnEmployeEvalName.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnEmployeEvalName.Size = new Size(200, 45);
-            btnEmployeEvalName.TabIndex = 4;
-            btnEmployeEvalName.Text = "Employee Name";
-            btnEmployeEvalName.Click += btnEmployeEvalName_Click;
-            // 
-            // guna2GradientPanel1
-            // 
-            guna2GradientPanel1.Controls.Add(btnEmployeEvalName);
-            guna2GradientPanel1.CustomizableEdges = customizableEdges17;
-            guna2GradientPanel1.Location = new Point(23, 30);
-            guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2GradientPanel1.Size = new Size(200, 667);
-            guna2GradientPanel1.TabIndex = 3;
-            // 
             // frmCreateEval
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -250,12 +213,10 @@
             Controls.Add(btnEvalRefresh);
             Controls.Add(label1);
             Controls.Add(txtQuestion);
-            Controls.Add(guna2GradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmCreateEval";
             Text = "frmCreateEval";
             Load += frmCreateEval_Load;
-            guna2GradientPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -270,7 +231,5 @@
         private Guna.UI2.WinForms.Guna2Button btnQuestionSubmit;
         private Label lblTaskName;
         private Guna.UI2.WinForms.Guna2TextBox txtQuestionSet;
-        private Guna.UI2.WinForms.Guna2Button btnEmployeEvalName;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
     }
 }

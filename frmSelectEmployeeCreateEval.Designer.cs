@@ -43,14 +43,14 @@
             label1 = new Label();
             lblRole = new Label();
             lblEmpName = new Label();
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            pnlList = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            label3 = new Label();
-            label2 = new Label();
+            lblPosition = new Label();
+            lblEmployeeName = new Label();
             rbtnSelectEmp = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             btnConfirmSelectedEmp = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2Panel2.SuspendLayout();
-            guna2Panel4.SuspendLayout();
+            pnlList.SuspendLayout();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -114,23 +114,23 @@
             lblEmpName.TabIndex = 10;
             lblEmpName.Text = "Employee Name";
             // 
-            // guna2Panel4
+            // pnlList
             // 
-            guna2Panel4.AutoScroll = true;
-            guna2Panel4.BackColor = Color.PowderBlue;
-            guna2Panel4.Controls.Add(guna2Panel1);
-            guna2Panel4.CustomizableEdges = customizableEdges6;
-            guna2Panel4.Location = new Point(169, 122);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            guna2Panel4.Size = new Size(844, 517);
-            guna2Panel4.TabIndex = 10;
+            pnlList.AutoScroll = true;
+            pnlList.BackColor = Color.PowderBlue;
+            pnlList.Controls.Add(guna2Panel1);
+            pnlList.CustomizableEdges = customizableEdges6;
+            pnlList.Location = new Point(169, 122);
+            pnlList.Name = "pnlList";
+            pnlList.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            pnlList.Size = new Size(844, 517);
+            pnlList.TabIndex = 10;
             // 
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.AliceBlue;
-            guna2Panel1.Controls.Add(label3);
-            guna2Panel1.Controls.Add(label2);
+            guna2Panel1.Controls.Add(lblPosition);
+            guna2Panel1.Controls.Add(lblEmployeeName);
             guna2Panel1.Controls.Add(rbtnSelectEmp);
             guna2Panel1.CustomizableEdges = customizableEdges4;
             guna2Panel1.Location = new Point(13, 14);
@@ -138,28 +138,29 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2Panel1.Size = new Size(817, 50);
             guna2Panel1.TabIndex = 9;
+            guna2Panel1.Visible = false;
             // 
-            // label3
+            // lblPosition
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 17F);
-            label3.ForeColor = Color.FromArgb(40, 90, 114);
-            label3.Location = new Point(402, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(148, 31);
-            label3.TabIndex = 12;
-            label3.Text = "Position/Role";
+            lblPosition.AutoSize = true;
+            lblPosition.Font = new Font("Segoe UI", 17F);
+            lblPosition.ForeColor = Color.FromArgb(40, 90, 114);
+            lblPosition.Location = new Point(402, 9);
+            lblPosition.Name = "lblPosition";
+            lblPosition.Size = new Size(148, 31);
+            lblPosition.TabIndex = 12;
+            lblPosition.Text = "Position/Role";
             // 
-            // label2
+            // lblEmployeeName
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 17F);
-            label2.ForeColor = Color.FromArgb(40, 90, 114);
-            label2.Location = new Point(0, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(181, 31);
-            label2.TabIndex = 11;
-            label2.Text = "Employee Name";
+            lblEmployeeName.AutoSize = true;
+            lblEmployeeName.Font = new Font("Segoe UI", 17F);
+            lblEmployeeName.ForeColor = Color.FromArgb(40, 90, 114);
+            lblEmployeeName.Location = new Point(0, 9);
+            lblEmployeeName.Name = "lblEmployeeName";
+            lblEmployeeName.Size = new Size(181, 31);
+            lblEmployeeName.TabIndex = 11;
+            lblEmployeeName.Text = "Employee Name";
             // 
             // rbtnSelectEmp
             // 
@@ -207,16 +208,17 @@
             BackColor = Color.AliceBlue;
             ClientSize = new Size(1160, 723);
             Controls.Add(btnConfirmSelectedEmp);
-            Controls.Add(guna2Panel4);
+            Controls.Add(pnlList);
             Controls.Add(guna2Panel2);
             Controls.Add(lblSelectEmployee);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmSelectEmployeeCreateEval";
             Text = "Select Employee";
+            Load += frmSelectEmployeeCreateEval_Load;
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
-            guna2Panel4.ResumeLayout(false);
+            pnlList.ResumeLayout(false);
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ResumeLayout(false);
@@ -229,12 +231,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Label lblRole;
         private Label lblEmpName;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel pnlList;
         private Guna.UI2.WinForms.Guna2GradientButton btnConfirmSelectedEmp;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Label label2;
+        private Label lblEmployeeName;
         private Guna.UI2.WinForms.Guna2CustomRadioButton rbtnSelectEmp;
-        private Label label3;
+        private Label lblPosition;
     }
 }

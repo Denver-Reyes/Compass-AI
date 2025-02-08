@@ -68,7 +68,6 @@
             txtbxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             txtbxDisplayFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             lblDisplayName = new Label();
-            lblDisplayNameHolder = new Label();
             pnlConfirmationEdits = new Guna.UI2.WinForms.Guna2Panel();
             btnConfirmationNo = new Guna.UI2.WinForms.Guna2Button();
             btnConfirmationYes = new Guna.UI2.WinForms.Guna2Button();
@@ -77,6 +76,7 @@
             txtbxRetypeNewPassConfirmation = new Guna.UI2.WinForms.Guna2TextBox();
             lblRetypeNewpassConfirmation = new Label();
             lblChangesConfirmation = new Label();
+            lblDisplayFirstNameHolder = new Label();
             pnlProfileEdit.SuspendLayout();
             pnlConfirmationEdits.SuspendLayout();
             SuspendLayout();
@@ -162,7 +162,7 @@
             pnlProfileEdit.Controls.Add(lblDisplayName);
             pnlProfileEdit.Controls.Add(btnEditProfile);
             pnlProfileEdit.Controls.Add(lblPassword);
-            pnlProfileEdit.Controls.Add(lblDisplayNameHolder);
+            pnlProfileEdit.Controls.Add(lblDisplayFirstNameHolder);
             pnlProfileEdit.Controls.Add(lblUsernameHolder);
             pnlProfileEdit.Controls.Add(lblUsername);
             pnlProfileEdit.Controls.Add(lblPasswordHolder);
@@ -185,7 +185,7 @@
             txtbxDisplayLastName.Font = new Font("Segoe UI", 9F);
             txtbxDisplayLastName.ForeColor = Color.Black;
             txtbxDisplayLastName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtbxDisplayLastName.Location = new Point(238, 55);
+            txtbxDisplayLastName.Location = new Point(238, 56);
             txtbxDisplayLastName.Name = "txtbxDisplayLastName";
             txtbxDisplayLastName.PasswordChar = '\0';
             txtbxDisplayLastName.PlaceholderText = "Last Name";
@@ -289,7 +289,7 @@
             txtbxDisplayFirstName.Font = new Font("Segoe UI", 9F);
             txtbxDisplayFirstName.ForeColor = Color.Black;
             txtbxDisplayFirstName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtbxDisplayFirstName.Location = new Point(27, 56);
+            txtbxDisplayFirstName.Location = new Point(26, 56);
             txtbxDisplayFirstName.Name = "txtbxDisplayFirstName";
             txtbxDisplayFirstName.PasswordChar = '\0';
             txtbxDisplayFirstName.PlaceholderText = "First Name";
@@ -307,17 +307,6 @@
             lblDisplayName.Size = new Size(83, 15);
             lblDisplayName.TabIndex = 9;
             lblDisplayName.Text = "Display Name:";
-            // 
-            // lblDisplayNameHolder
-            // 
-            lblDisplayNameHolder.AutoSize = true;
-            lblDisplayNameHolder.Font = new Font("Segoe UI", 20F);
-            lblDisplayNameHolder.ForeColor = Color.FromArgb(40, 90, 114);
-            lblDisplayNameHolder.Location = new Point(27, 55);
-            lblDisplayNameHolder.Name = "lblDisplayNameHolder";
-            lblDisplayNameHolder.Size = new Size(88, 37);
-            lblDisplayNameHolder.TabIndex = 10;
-            lblDisplayNameHolder.Text = "Name";
             // 
             // pnlConfirmationEdits
             // 
@@ -447,6 +436,17 @@
             lblChangesConfirmation.TabIndex = 11;
             lblChangesConfirmation.Text = "Confirmation";
             // 
+            // lblDisplayFirstNameHolder
+            // 
+            lblDisplayFirstNameHolder.AutoSize = true;
+            lblDisplayFirstNameHolder.Font = new Font("Segoe UI", 20F);
+            lblDisplayFirstNameHolder.ForeColor = Color.FromArgb(40, 90, 114);
+            lblDisplayFirstNameHolder.Location = new Point(27, 55);
+            lblDisplayFirstNameHolder.Name = "lblDisplayFirstNameHolder";
+            lblDisplayFirstNameHolder.Size = new Size(88, 37);
+            lblDisplayFirstNameHolder.TabIndex = 10;
+            lblDisplayFirstNameHolder.Text = "Name";
+            // 
             // frmProfile
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -478,7 +478,6 @@
         private Guna.UI2.WinForms.Guna2Button btnEditProfile;
         private Guna.UI2.WinForms.Guna2Panel pnlProfileEdit;
         private Label lblDisplayName;
-        private Label lblDisplayNameHolder;
         private Guna.UI2.WinForms.Guna2TextBox txtbxDisplayFirstName;
         private Guna.UI2.WinForms.Guna2TextBox txtbxUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtbxPassword;
@@ -493,5 +492,6 @@
         private Guna.UI2.WinForms.Guna2Button btnConfirmationNo;
         private Guna.UI2.WinForms.Guna2Button btnConfirmationYes;
         private Guna.UI2.WinForms.Guna2TextBox txtbxDisplayLastName;
+        private Label lblDisplayFirstNameHolder;
     }
 }
