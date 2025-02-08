@@ -85,10 +85,13 @@ namespace Compass_AI
                 {
                     connection.Open();
 
-                    // Query to get username and displayname
-                    string query = "SELECT username, displayname FROM tblusers WHERE role = 'employee'";
+                    // Query to get username and displayname for employees under the logged-in supervisor
+                    string query = "SELECT username, displayname FROM tblusers WHERE role = 'employee' AND underby = @supervisor";
+
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
+                        command.Parameters.AddWithValue("@supervisor", UserName); // Use the logged-in supervisor's username
+
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
