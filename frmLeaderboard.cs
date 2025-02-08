@@ -26,7 +26,7 @@ namespace Compass_AI
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT username, userscore FROM tblusers ORDER BY userscore DESC LIMIT 100"; // Top 100 rankings
+                string query = "SELECT displayname, userscore FROM tblusers ORDER BY userscore DESC LIMIT 100"; // Top 100 rankings
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
@@ -37,7 +37,7 @@ namespace Compass_AI
 
                         while (reader.Read())
                         {
-                            string playerName = reader["username"].ToString();
+                            string playerName = reader["displayname"].ToString();
                             int playerScore = reader["userscore"] == DBNull.Value ? 0 : Convert.ToInt32(reader["userscore"]);
 
                             if (rank == 1)

@@ -76,21 +76,31 @@ namespace Compass_AI
 
         private void LoadEmployeeData()
         {
+            cmbEmployeeEval.Items.Clear(); // Clear existing items
+            Dictionary<string, string> employeeData = new Dictionary<string, string>(); // Store displayname -> username mapping
+
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    // Query to get all employees
-                    string query = "SELECT username FROM tblusers WHERE role = 'employee'";
+                    // Query to get username and displayname
+                    string query = "SELECT username, displayname FROM tblusers WHERE role = 'employee'";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                cmbEmployeeEval.Items.Add(reader["username"].ToString());
+                                string username = reader["username"].ToString();
+                                string displayname = reader["displayname"].ToString();
+
+                                // Store in dictionary
+                                employeeData[displayname] = username;
+
+                                // Add only displayname to ComboBox
+                                cmbEmployeeEval.Items.Add(displayname);
                             }
                         }
                     }
@@ -100,14 +110,31 @@ namespace Compass_AI
             {
                 MessageBox.Show($"Error loading employee data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // Store dictionary in the ComboBox Tag for later retrieval
+            cmbEmployeeEval.Tag = employeeData;
         }
+
 
         private void cmbEmployeeEval_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedEmployee = cmbEmployeeEval.SelectedItem.ToString();
-            LoadTaskData(selectedEmployee);
+            string selectedDisplayName = cmbEmployeeEval.SelectedItem?.ToString();
 
+            if (string.IsNullOrEmpty(selectedDisplayName)) return;
+
+            // Retrieve the actual username from the dictionary stored in the ComboBox Tag
+            var employeeData = cmbEmployeeEval.Tag as Dictionary<string, string>;
+            string selectedUsername = employeeData.ContainsKey(selectedDisplayName) ? employeeData[selectedDisplayName] : null;
+
+            if (selectedUsername == null)
+            {
+                MessageBox.Show("Error retrieving user data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            LoadTaskData(selectedUsername);
         }
+
 
         private void LoadTaskData(string employeeName)
         {
@@ -147,46 +174,35 @@ namespace Compass_AI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (UserRole == "employee")
+            if (UserRole == "supervisor")
             {
-                string selectedTask = cmbTaskGivenEmployee.SelectedItem?.ToString();
-
-                // Ensure the task is selected before proceeding
-                if (string.IsNullOrEmpty(selectedTask))
-                {
-                    MessageBox.Show("Please select a task.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Open frmEvaluationEmp for the employee
-                frmEvaluationEmp frmEvaluationEmp = new frmEvaluationEmp(UserName, selectedTask); // Use `username` for the logged-in employee
-                frmEvaluationEmp.MdiParent = this.MdiParent; // Maintain the MDI structure
-                frmEvaluationEmp.Show();
-                frmEvaluationEmp.Dock = DockStyle.Fill;
-            }
-            else if (UserRole == "supervisor")
-            {
-                string selectedEmployee = cmbEmployeeEval.SelectedItem?.ToString();
+                string selectedDisplayName = cmbEmployeeEval.SelectedItem?.ToString();
                 string selectedTask = cmbTaskGiven.SelectedItem?.ToString();
 
-                // Ensure both employee and task are selected before proceeding
-                if (string.IsNullOrEmpty(selectedEmployee) || string.IsNullOrEmpty(selectedTask))
+                if (string.IsNullOrEmpty(selectedDisplayName) || string.IsNullOrEmpty(selectedTask))
                 {
                     MessageBox.Show("Please select both an employee and a task.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // Open frmEvaluationEmp for the supervisor with the selected employee and task
-                frmEvaluationEmp frmEvaluationEmp = new frmEvaluationEmp(selectedEmployee, selectedTask);
+                // Retrieve actual username from dictionary stored in cmbEmployeeEval.Tag
+                var employeeData = cmbEmployeeEval.Tag as Dictionary<string, string>;
+                string selectedUsername = employeeData.ContainsKey(selectedDisplayName) ? employeeData[selectedDisplayName] : null;
+
+                if (selectedUsername == null)
+                {
+                    MessageBox.Show("Error retrieving username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Pass the correct `username`
+                frmEvaluationEmp frmEvaluationEmp = new frmEvaluationEmp(selectedUsername, selectedTask);
                 frmEvaluationEmp.MdiParent = this.MdiParent; // Maintain the MDI structure
                 frmEvaluationEmp.Show();
                 frmEvaluationEmp.Dock = DockStyle.Fill;
             }
-            else
-            {
-                MessageBox.Show("User role not recognized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
+
 
         private void pnlEmployee_Paint(object sender, PaintEventArgs e)
         {
